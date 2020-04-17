@@ -130,13 +130,16 @@ def update_github_star_data(
 
     num_data_points = len(times) + len(extra_times)
     while True:
-        # find longest interval
+        # find longest interval with stars more than one apart
         max_length = timedelta(0)
         k = -1
-        for i, (previous, current) in enumerate(zip(times, times[1:])):
-            if current - previous > max_length:
+        for i in range(len(times) - 1):
+            if abs(stars[i + 1] - stars[i]) < 2:
+                continue
+            length = times[i + 1] - times[i]
+            if length > max_length:
                 k = i
-                max_length = current - previous
+                max_length = length
         assert k >= 0
 
         if max_length < max_interval_length:
