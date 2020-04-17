@@ -173,12 +173,12 @@ def update_github_star_data(
 
     # get number of stars right now
     now = datetime.now(timezone.utc)
-    if now - times[-1] > max_interval_length:
+    if now - new_times[-1] > max_interval_length:
         r = requests.get(f"https://api.github.com/repos/{repo}", headers=headers)
         assert r.ok, f"{r.url}, status code {r.status_code}"
         now_num_stars = r.json()["stargazers_count"]
         now = now.replace(microsecond=0)
-        times.append(now)
-        stars.append(now_num_stars)
+        new_times.append(now)
+        new_stars.append(now_num_stars)
 
     return dict(zip(new_times, new_stars))

@@ -21,7 +21,7 @@ def update_groups():
                 this_dir / "data" / "{}.json".format(repo.replace("/", "_")),
                 max_interval_length=timedelta(days=30),
                 repo=repo,
-                license="CC-BY",
+                license="CC BY",
                 creator="Nico Schlömer",
                 token=args.token,
             )
