@@ -161,22 +161,24 @@ def update_github_star_data(
     times += extra_times
     stars += extra_stars
 
-    # get number of stars right now
-    r = requests.get(f"https://api.github.com/repos/{repo}", headers=headers)
-    assert r.ok, f"{r.url}, status code {r.status_code}"
-    now_num_stars = r.json()["stargazers_count"]
-    now = datetime.now(timezone.utc)
-    now = now.replace(microsecond=0)
-
-    if now > times[-1]:
-        times.append(now)
-        stars.append(now_num_stars)
-
     # check if we can remove some data (especially if we have two equal times)
     new_times = [times[0]]
+    new_stars = [stars[0]]
     for k in range(len(times) - 1):
         if times[k + 1] - new_times[-1] > max_interval_length:
             new_times.append(times[k])
+            new_stars.append(stars[k])
     new_times.append(times[-1])
+    new_stars.append(stars[-1])
 
-    return dict(zip(times, stars))
+    # get number of stars right now
+    now = datetime.now(timezone.utc)
+    if now - times[-1] > max_interval_length:
+        r = requests.get(f"https://api.github.com/repos/{repo}", headers=headers)
+        assert r.ok, f"{r.url}, status code {r.status_code}"
+        now_num_stars = r.json()["stargazers_count"]
+        now = now.replace(microsecond=0)
+        times.append(now)
+        stars.append(now_num_stars)
+
+    return dict(zip(new_times, new_stars))
