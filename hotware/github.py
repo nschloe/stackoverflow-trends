@@ -110,17 +110,23 @@ def update_github_star_data(
         extra_times = []
         extra_stars = []
     else:
-        assert time_first in times
-        assert time_last in times
+        assert time_first == times[0]
 
-        # separate the data that can be retrieved via page bisection and the extra data
-        k0 = times.index(time_first)
-        assert k0 == 0
-        k1 = times.index(time_last)
-        extra_times = times[k1 + 1 :]
-        extra_stars = stars[k1 + 1 :]
-        times = times[: k1 + 1]
-        stars = stars[: k1 + 1]
+        # break off the extra data
+        k1 = 0
+        for time in times:
+            if time_last < time:
+                break
+            k1 += 1
+        extra_times = times[k1:]
+        extra_stars = stars[k1:]
+        times = times[:k1]
+        stars = stars[:k1]
+
+        # append new data if necessary
+        if time_last > times[-1]:
+            times.append(time_last)
+            stars.append(last_page)
 
     num_data_points = len(times) + len(extra_times)
     while True:
@@ -162,8 +168,15 @@ def update_github_star_data(
     now = datetime.now(timezone.utc)
     now = now.replace(microsecond=0)
 
-    if now - times[-1] > max_interval_length:
+    if now > times[-1]:
         times.append(now)
         stars.append(now_num_stars)
+
+    # check if we can remove some data (especially if we have two equal times)
+    new_times = [times[0]]
+    for k in range(len(times) - 1):
+        if times[k + 1] - new_times[-1] > max_interval_length:
+            new_times.append(times[k])
+    new_times.append(times[-1])
 
     return dict(zip(times, stars))

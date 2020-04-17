@@ -5,12 +5,11 @@ from datetime import timedelta
 
 import hotware
 
-this_dir = pathlib.Path(__file__).resolve().parent
-
 
 def update_groups():
     args = parse_args()
 
+    this_dir = pathlib.Path(__file__).resolve().parent
     with open(this_dir / "groups.json") as f:
         data = json.load(f)
 
