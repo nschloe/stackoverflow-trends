@@ -151,7 +151,7 @@ def update_github_star_data(
         mp = (stars[k] + stars[k + 1]) // 2
 
         r = requests.get(url, headers=headers, params={"page": mp, "per_page": 1})
-        assert r.ok
+        assert r.ok, f"{r.url}, status code {r.status_code}"
         time = datetime.strptime(r.json()[0]["starred_at"], date_fmt)
 
         # sort this into the arrays
