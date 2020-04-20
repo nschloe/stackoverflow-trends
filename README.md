@@ -26,14 +26,12 @@ If you'd to see more graphs, open an issue on this repo.
 - [DevOps](#devops)
 - [Build systems](#build-systems)
 
-### Total number of questions
-<img src="https://nschloe.github.io/hotware/all.svg" width="70%">
-
 ### Programming languages
 <img src="https://nschloe.github.io/hotware/programming-languages.svg" width="100%">
 
 ### Version control systems
-<img src="https://nschloe.github.io/hotware/vcs.svg" width="100%">
+![github-vcs](https://nschloe.github.io/hotware/github-vcs.svg) | ![stackoverflow-vcs](https://nschloe.github.io/hotware/stackoverflow-vcs.svg)
+:-------------------:|:------------------:|
 
 ### Front-End frameworks
 <img src="https://nschloe.github.io/hotware/frontend-frameworks.svg" width="100%">
