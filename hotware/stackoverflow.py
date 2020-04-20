@@ -4,10 +4,6 @@ from datetime import datetime
 
 import requests
 
-this_dir = os.path.dirname(os.path.abspath(__file__))
-with open(os.path.join(this_dir, "groups.json"), "r") as f:
-    groups = json.load(f)
-
 # tags = [item for lst in groups.values() for item in lst]
 # tags += [None]
 
@@ -17,7 +13,7 @@ now = datetime.utcnow()
 epoch = datetime(1970, 1, 1)
 
 
-def add_data_to_file(filename, fromdate, todate):
+def update(filename, fromdate, todate):
     url = "https://api.stackexchange.com/questions"
     # https://stackoverflow.com/a/22101249/353337
     fromts = int((fromdate - epoch).total_seconds())
@@ -31,8 +27,10 @@ def add_data_to_file(filename, fromdate, todate):
     if tag is not None:
         params["tagged"] = tag
     response = requests.get(url, params)
-
     assert response.ok, (response, response.reason)
+
+    exit(1)
+
     data = response.json()
     lst.append([fromdate.isoformat(), todate.isoformat(), data["total"]])
 
