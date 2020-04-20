@@ -35,6 +35,20 @@ def plot(filenames):
 
     cpl.multiplot(times, values, labels)
 
+    if content["creator"]:
+        creator = content["creator"]
+        license = content["license"]
+        xlim = plt.gca().get_xlim()
+        ylim = plt.gca().get_ylim()
+        plt.text(
+            xlim[0],
+            -(ylim[1] - ylim[0]) * 0.1,
+            f"Data source: GitHub API | Author: {creator} | License: {license}",
+            fontsize=10,
+            verticalalignment="top",
+            color="#888"
+        )
+
 
 def _get_avg_per_day(times, values):
     return [
