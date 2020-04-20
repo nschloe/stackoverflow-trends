@@ -17,7 +17,7 @@ def update_groups():
         print()
         for repo in group:
             print(repo, "...")
-            hotware.github.update_stars(
+            hotware.github.update_file(
                 this_dir / "data" / "{}.json".format(repo.replace("/", "_")),
                 max_interval_length=timedelta(days=30),
                 repo=repo,

@@ -6,7 +6,7 @@ from datetime import datetime, timedelta, timezone
 import requests
 
 
-def update_stars(
+def update_file(
     filename,
     max_interval_length,
     repo=None,

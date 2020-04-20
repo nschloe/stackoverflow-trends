@@ -28,6 +28,9 @@ def plot(filenames):
 
         times.append(list(data.keys()))
         stars.append(list(data.values()))
-        labels.append(content["repository"])
+        if "repository" in content:
+            labels.append(content["repository"])
+        else:
+            labels.append(content["tag"])
 
     cpl.multiplot(times, stars, labels)
