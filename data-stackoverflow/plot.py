@@ -38,5 +38,7 @@ for group_name, group in data.items():
 
     # plt.title("% of all questions that month", fontsize=14)
     # plt.show()
-    plt.savefig(group_name + ".svg", transparent=True, bbox_inches="tight")
+    plt.savefig(
+        "stackoverflow-" + group_name + ".svg", transparent=True, bbox_inches="tight"
+    )
     plt.close()

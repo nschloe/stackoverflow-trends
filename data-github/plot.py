@@ -39,5 +39,5 @@ for group_name, group in data.items():
     # plt.title("Daily number of GitHub stars", fontsize=14)
 
     # plt.show()
-    plt.savefig(group_name + ".svg", transparent=True, bbox_inches="tight")
+    plt.savefig("github-" + group_name + ".svg", transparent=True, bbox_inches="tight")
     plt.close()
