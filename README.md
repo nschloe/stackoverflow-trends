@@ -14,6 +14,7 @@ If you'd to see more graphs, open an issue on this repo.
 - [Browsers](#browsers)
 - [Databases](#databases)
 - [JavaScript package managers](#javascript-package-managers)
+- [JavaScript testing frameworks](#javascript-testing-frameworks)
 - [Text editors](#text-editors)
 - [Operating systems](#operating-systems)
 - [Mobile operating systems](#mobile-operating-systems)
@@ -49,6 +50,10 @@ If you'd to see more graphs, open an issue on this repo.
 
 ### JavaScript package managers
 ![github-javascript-package-managers](https://nschloe.github.io/hotware/github-javascript-package-managers.svg) | ![stackoverflow-javascript-package-managers](https://nschloe.github.io/hotware/stackoverflow-javascript-package-managers.svg)
+:-------------------:|:------------------:|
+
+### JavaScript testing frameworks
+![github-javascript-testing-frameworks](https://nschloe.github.io/hotware/github-javascript-testing-frameworks.svg) | ![stackoverflow-testing-frameworks](https://nschloe.github.io/hotware/stackoverflow-javascript-testing-frameworks.svg)
 :-------------------:|:------------------:|
 
 ### Text editors
