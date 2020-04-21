@@ -33,53 +33,64 @@ If you'd to see more graphs, open an issue on this repo.
 ![stackoverflow-vcs](https://nschloe.github.io/hotware/stackoverflow-vcs.svg)
 
 ### Front-End frameworks
-![github-vcs](https://nschloe.github.io/hotware/github-frontend-frameworks.svg) | ![stackoverflow-vcs](https://nschloe.github.io/hotware/stackoverflow-frontend-frameworks.svg)
+![github-frontend-frameworks](https://nschloe.github.io/hotware/github-frontend-frameworks.svg) | ![stackoverflow-frontend-frameworks](https://nschloe.github.io/hotware/stackoverflow-frontend-frameworks.svg)
 :-------------------:|:------------------:|
 
 ### Back-End frameworks
-<img src="https://nschloe.github.io/hotware/backend-frameworks.svg" width="100%">
+![github-backend-frameworks](https://nschloe.github.io/hotware/github-backend-frameworks.svg) | ![stackoverflow-backend-frameworks](https://nschloe.github.io/hotware/stackoverflow-backend-frameworks.svg)
+:-------------------:|:------------------:|
 
 ### Browsers
-<img src="https://nschloe.github.io/hotware/browsers.svg" width="100%">
+![stackoverflow-browsers](https://nschloe.github.io/hotware/stackoverflow-browsers.svg)
 
 ### Databases
-<img src="https://nschloe.github.io/hotware/databases.svg" width="100%">
+![github-databases](https://nschloe.github.io/hotware/github-databases.svg) | ![stackoverflow-databases](https://nschloe.github.io/hotware/stackoverflow-databases.svg)
+:-------------------:|:------------------:|
 
 ### JavaScript package managers
-<img src="https://nschloe.github.io/hotware/javascript-package-managers.svg" width="100%">
+![github-javascript-package-managers](https://nschloe.github.io/hotware/github-javascript-package-managers.svg) | ![stackoverflow-javascript-package-managers](https://nschloe.github.io/hotware/stackoverflow-javascript-package-managers.svg)
+:-------------------:|:------------------:|
 
 ### Text editors
-<img src="https://nschloe.github.io/hotware/text-editors.svg" width="100%">
+![github-text-editors](https://nschloe.github.io/hotware/github-text-editors.svg) | ![stackoverflow-text-editors](https://nschloe.github.io/hotware/stackoverflow-text-editors.svg)
+:-------------------:|:------------------:|
 
 ### Operating systems
-<img src="https://nschloe.github.io/hotware/operating-systems.svg" width="100%">
+<img src="https://nschloe.github.io/hotware/stackoverflow-operating-systems.svg" width="100%">
 
 ### Mobile operating systems
-<img src="https://nschloe.github.io/hotware/mobile-operating-systems.svg" width="100%">
+<img src="https://nschloe.github.io/hotware/stackoverflow-mobile-operating-systems.svg" width="100%">
 
 ### Shells
-<img src="https://nschloe.github.io/hotware/shells.svg" width="100%">
+![github-shells](https://nschloe.github.io/hotware/github-shells.svg) | ![stackoverflow-shells](https://nschloe.github.io/hotware/stackoverflow-shells.svg)
+:-------------------:|:------------------:|
 
 ### Code-hosting platforms
-<img src="https://nschloe.github.io/hotware/code-hosting-platforms.svg" width="100%">
+<img src="https://nschloe.github.io/hotware/stackoverflow-code-hosting-platforms.svg" width="100%">
 
 ### Content-management systems
-<img src="https://nschloe.github.io/hotware/content-management-systems.svg" width="100%">
+![github-content-management-systems](https://nschloe.github.io/hotware/github-content-management-systems.svg) | ![stackoverflow-content-management-systems](https://nschloe.github.io/hotware/stackoverflow-content-management-systems.svg)
+:-------------------:|:------------------:|
 
 ### Continuous-integration services
-<img src="https://nschloe.github.io/hotware/continuous-integration-services.svg" width="100%">
+![github-continuous-integration-services](https://nschloe.github.io/hotware/github-continuous-integration-services.svg) | ![stackoverflow-continuous-integration-services](https://nschloe.github.io/hotware/stackoverflow-continuous-integration-services.svg)
+:-------------------:|:------------------:|
 
 ### Office suites
-<img src="https://nschloe.github.io/hotware/office-suites.svg" width="100%">
+![github-office-suites](https://nschloe.github.io/hotware/github-office-suites.svg) | ![stackoverflow-office-suites](https://nschloe.github.io/hotware/stackoverflow-office-suites.svg)
+:-------------------:|:------------------:|
 
 ### Computer algebra systems
-<img src="https://nschloe.github.io/hotware/computer-algebra-systems.svg" width="100%">
+![github-computer-algebra-systems](https://nschloe.github.io/hotware/github-computer-algebra-systems.svg) | ![stackoverflow-computer-algebra-systems](https://nschloe.github.io/hotware/stackoverflow-computer-algebra-systems.svg)
+:-------------------:|:------------------:|
 
 ### DevOps
-<img src="https://nschloe.github.io/hotware/devops.svg" width="100%">
+![github-devops](https://nschloe.github.io/hotware/github-devops.svg) | ![stackoverflow-devops](https://nschloe.github.io/hotware/stackoverflow-devops.svg)
+:-------------------:|:------------------:|
 
 ### Build systems
-<img src="https://nschloe.github.io/hotware/build-systems.svg" width="100%">
+![github-build-systems](https://nschloe.github.io/hotware/github-build-systems.svg) | ![stackoverflow-build-systems](https://nschloe.github.io/hotware/stackoverflow-build-systems.svg)
+:-------------------:|:------------------:|
 
 ### License
 This software is published under the [GPLv3 license](https://www.gnu.org/licenses/gpl-3.0.en.html).
