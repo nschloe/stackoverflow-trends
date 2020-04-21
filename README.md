@@ -30,11 +30,11 @@ If you'd to see more graphs, open an issue on this repo.
 <img src="https://nschloe.github.io/hotware/programming-languages.svg" width="100%">
 
 ### Version control systems
-![github-vcs](https://nschloe.github.io/hotware/github-vcs.svg) | ![stackoverflow-vcs](https://nschloe.github.io/hotware/stackoverflow-vcs.svg)
-:-------------------:|:------------------:|
+![stackoverflow-vcs](https://nschloe.github.io/hotware/stackoverflow-vcs.svg)
 
 ### Front-End frameworks
-<img src="https://nschloe.github.io/hotware/frontend-frameworks.svg" width="100%">
+![github-vcs](https://nschloe.github.io/hotware/github-frontend-frameworks.svg) | ![stackoverflow-vcs](https://nschloe.github.io/hotware/stackoverflow-frontend-frameworks.svg)
+:-------------------:|:------------------:|
 
 ### Back-End frameworks
 <img src="https://nschloe.github.io/hotware/backend-frameworks.svg" width="100%">
