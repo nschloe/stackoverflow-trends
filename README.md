@@ -26,7 +26,8 @@ hotware-gh-star-history nschloe/meshio nschloe/betterbib nschloe/tikzplotlib nsc
 ```
 hotware-so-tag-history numpy scipy pandas matplotlib tensorflow
 ```
-
+Both GitHub and StackOverflow have a rate limit, so you might want to get a token and
+provide it to hotware.
 
 ## Gallery
 
