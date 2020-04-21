@@ -1,28 +1,35 @@
 import argparse
 import sys
+from datetime import timedelta
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 
 from ..__about__ import __version__
-from ..stackoverflow import update_file
-from ..tools import plot_per_day
+from ..github import update_file
+from ..tools import plot
 
 
-def tag_history(argv=None):
+def star_history(argv=None):
     args = parse_args(argv)
 
     # get the data
     filenames = []
-    for tag in args.tags:
+    for repo in args.repos:
         p = Path(".") if args.cache_dir is None else Path(args.cache_dir)
-        filenames.append(p / ("stackoverflow-" + tag + ".json"))
-        update_file(filenames[-1], tag=tag, title="StackOverflow tags")
+        filenames.append(p / ("github-" + repo.replace("/", "_") + ".json"))
+        update_file(
+            filenames[-1],
+            timedelta(days=args.max_gap_days),
+            repo=repo,
+            token=args.token,
+            title="GitHub stars",
+            verbose=True
+        )
 
     # plot it
-    plot_per_day(filenames)
-    plt.title("Daily number of questions on StackOverflow")
-
+    plot(filenames)
+    plt.title("Star count on GitHub")
     if args.output:
         plt.savefig(args.output, transparent=True, bbox_inches="tight")
     else:
@@ -31,12 +38,22 @@ def tag_history(argv=None):
 
 def parse_args(argv):
     parser = argparse.ArgumentParser(
-        description="StackOverflow tag history",
+        description="GitHub star history",
         # Needed for line break in --version:
         formatter_class=argparse.RawTextHelpFormatter,
     )
 
-    parser.add_argument("tags", nargs="+", type=str, help="tags to analyze")
+    parser.add_argument("repos", nargs="+", type=str, help="repositories to analyze")
+
+    parser.add_argument(
+        "-m",
+        "--max-gap-days",
+        required=True,
+        type=int,
+        help="maximum number of days between two measurements",
+    )
+
+    parser.add_argument("-t", "--token", type=str, help="GitHub token")
 
     parser.add_argument(
         "-o",
