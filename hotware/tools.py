@@ -7,6 +7,11 @@ import matplotlib.pyplot as plt
 import cleanplotlib as cpl
 
 
+# https://stackoverflow.com/a/3382369/353337
+def _argsort(seq):
+    return sorted(range(len(seq)), key=seq.__getitem__)
+
+
 def show(*args, **kwargs):
     plot(*args, **kwargs)
     plt.show()
@@ -53,7 +58,36 @@ def _get_middle_times(lst):
     ]
 
 
-def plot_per_day(filenames):
+def plot_per_day(filenames, sort=True, cut=None):
+    if sort:
+        # sort them such that the largest at the last time step gets plotted first and
+        # the colors are in a nice order
+        last_vals = []
+        for filename in filenames:
+            with open(filename) as f:
+                content = json.load(f)
+            vals = list(content["data"].values())
+            last_vals.append(vals[-1] - vals[-2])
+
+        filenames = [filenames[i] for i in _argsort(last_vals)[::-1]]
+
+    if cut is not None:
+        # cut those files where the max data is less than cut*max_overall
+        max_vals = []
+        for filename in filenames:
+            with open(filename) as f:
+                content = json.load(f)
+            vals = list(content["data"].values())
+            vals = [vals[k + 1] - vals[k] for k in range(len(vals) - 1)]
+            max_vals.append(max(vals))
+
+        max_overall = max(max_vals)
+        filenames = [
+            filename
+            for filename, max_val in zip(filenames, max_vals)
+            if max_val > cut * max_overall
+        ]
+
     times = []
     values = []
     labels = []
