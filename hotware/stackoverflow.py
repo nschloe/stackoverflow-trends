@@ -18,16 +18,18 @@ def update_file(
         fromdate = datetime(2008, 9, 15)
         content = {
             "title": title,
-            "tag": tag,
-            "creator": creator,
-            "license": license,
+            "name": tag,
             "data": {fromdate.isoformat(): 0},
         }
+        if creator is not None:
+            content["creator"] = creator
+        if license is not None:
+            content["license"] = license
     else:
         if title is not None:
             assert content["title"] == title
         if tag is not None:
-            assert content["tag"] == tag
+            assert content["name"] == tag
         if creator is not None:
             assert content["creator"] == creator
         if license is not None:
@@ -35,7 +37,7 @@ def update_file(
 
         fromdate = datetime.fromisoformat(list(content["data"].keys())[-1])
 
-    tag = content["tag"]
+    tag = content["name"]
 
     epoch = datetime(1970, 1, 1)
     now = datetime.utcnow()

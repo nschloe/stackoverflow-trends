@@ -64,7 +64,7 @@ def plot(filenames, sort=True, cut=None):
 
     cpl.multiplot(times, values, labels)
 
-    if content["creator"]:
+    if "creator" in content:
         _add_license_statement(content)
 
 
@@ -136,7 +136,7 @@ def plot_per_day(filenames, sort=True, cut=None):
 
     cpl.multiplot(times, values, labels)
 
-    if content["creator"]:
+    if "creator" in content:
         _add_license_statement(content)
 
 

@@ -4,7 +4,6 @@
 </p>
 
 [![gh-actions](https://img.shields.io/github/workflow/status/nschloe/hotware/ci?style=flat-square)](https://github.com/nschloe/hotware/actions?query=workflow%3Aci)
-[![codecov](https://img.shields.io/codecov/c/github/nschloe/hotware.svg?style=flat-square)](https://codecov.io/gh/nschloe/hotware)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg?style=flat-square)](https://github.com/psf/black)
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/hotware.svg?style=flat-square)](https://pypi.org/pypi/hotware/)
 [![PyPi Version](https://img.shields.io/pypi/v/hotware.svg?style=flat-square)](https://pypi.org/project/hotware)
