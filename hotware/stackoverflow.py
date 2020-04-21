@@ -6,26 +6,6 @@ import requests
 
 import cleanplotlib as cpl
 
-# tags = [item for lst in groups.values() for item in lst]
-# tags += [None]
-
-# groups["all"] = [None]
-
-
-def update():
-
-    exit(1)
-
-    data = response.json()
-    lst.append([fromdate.isoformat(), todate.isoformat(), data["total"]])
-
-    p = "all" if tag is None else tag
-    print("{:<16}: {:<6}  ({} -- {})".format(p, lst[-1][2], lst[-1][0], lst[-1][1]))
-
-    with open(filename, "w") as f:
-        json.dump(lst, f, indent=2)
-    return
-
 
 def update_file(
     filename, tag=None, title="StackOverflow tags", creator=None, license=None,
