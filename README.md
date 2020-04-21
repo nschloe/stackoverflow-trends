@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/nschloe/hotware"><img alt="hotware-logo" src="https://nschloe.github.io/hotware/hotware-logo-path.svg" width="50%"></a>
-  <p align="center">How popular is this software?</p>
+  <p align="center">How popular is it?</p>
 </p>
 
 [![gh-actions](https://img.shields.io/github/workflow/status/nschloe/hotware/ci?style=flat-square)](https://github.com/nschloe/hotware/actions?query=workflow%3Aci)
@@ -21,13 +21,19 @@ For example, the plots
 
 are produced with
 ```
-hotware-gh-star-history nschloe/meshio nschloe/betterbib nschloe/tikzplotlib nschloe/perfplot nschloe/quadpy nschloe/pygmsh -m 30 -t githubtoken123243324 -o nschloe.svg
+hotware-gh-star-history nschloe/meshio nschloe/quadpy -m 30 -t githubtoken0123 -o nschloe.svg
 ```
 ```
 hotware-so-tag-history numpy scipy pandas matplotlib tensorflow
 ```
 Both GitHub and StackOverflow have a rate limit, so you might want to get a token and
 provide it to hotware.
+
+Install with
+```
+pip install hotware
+```
+and use the command-line tools as displayed. The `-h` switch gives more details.
 
 ## Gallery
 
