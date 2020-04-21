@@ -48,7 +48,6 @@ def update_file(
 
     has_new_data = False
     while todate < now:
-        has_new_data = True
         url = "https://api.stackexchange.com/questions"
         # https://stackoverflow.com/a/22101249/353337
         fromts = int((fromdate - epoch).total_seconds())
@@ -62,12 +61,16 @@ def update_file(
         if tag is not None:
             params["tagged"] = tag
         response = requests.get(url, params)
-        assert response.ok, (response, response.reason)
+        if not response.ok:
+            print(response, response.reason)
+            break
 
         data = response.json()
         cumsum = list(content["data"].values())[-1] + data["total"]
         to_iso = todate.isoformat()
         content["data"][to_iso] = cumsum
+
+        has_new_data = True
 
         p = "all" if tag is None else tag
         from_iso = fromdate.isoformat()
