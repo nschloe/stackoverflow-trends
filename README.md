@@ -21,7 +21,7 @@ For example, the plots
 
 are produced with
 ```
-hotware-gh-star-history nschloe/meshio nschloe/betterbib nschloe/tikzplotlib nschloe/perfplot nschloe/quadpy nschloe/pygmsh -m 30 -t githubtoken123243324 -o nschloe.svg
+hotware-gh-star-history nschloe/meshio nschloe/quadpy -m 30 -o nschloe.svg
 ```
 ```
 hotware-so-tag-history numpy scipy pandas matplotlib tensorflow
