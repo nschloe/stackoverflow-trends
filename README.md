@@ -27,10 +27,10 @@ If you'd to see more graphs, open an issue on this repo.
 - [Build systems](#build-systems)
 
 ### Programming languages
-<img src="https://nschloe.github.io/hotware/programming-languages.svg" width="100%">
+<img src="https://nschloe.github.io/hotware/stackoverflow-programming-languages.svg" width="60%">
 
 ### Version control systems
-![stackoverflow-vcs](https://nschloe.github.io/hotware/stackoverflow-vcs.svg)
+<img src="https://nschloe.github.io/hotware/stackoverflow-vcs.svg" width="60%">
 
 ### Front-End frameworks
 ![github-frontend-frameworks](https://nschloe.github.io/hotware/github-frontend-frameworks.svg) | ![stackoverflow-frontend-frameworks](https://nschloe.github.io/hotware/stackoverflow-frontend-frameworks.svg)
@@ -41,7 +41,7 @@ If you'd to see more graphs, open an issue on this repo.
 :-------------------:|:------------------:|
 
 ### Browsers
-![stackoverflow-browsers](https://nschloe.github.io/hotware/stackoverflow-browsers.svg)
+<img src="https://nschloe.github.io/hotware/stackoverflow-browsers.svg" width="60%">
 
 ### Databases
 ![github-databases](https://nschloe.github.io/hotware/github-databases.svg) | ![stackoverflow-databases](https://nschloe.github.io/hotware/stackoverflow-databases.svg)
@@ -56,17 +56,17 @@ If you'd to see more graphs, open an issue on this repo.
 :-------------------:|:------------------:|
 
 ### Operating systems
-<img src="https://nschloe.github.io/hotware/stackoverflow-operating-systems.svg" width="100%">
+<img src="https://nschloe.github.io/hotware/stackoverflow-operating-systems.svg" width="60%">
 
 ### Mobile operating systems
-<img src="https://nschloe.github.io/hotware/stackoverflow-mobile-operating-systems.svg" width="100%">
+<img src="https://nschloe.github.io/hotware/stackoverflow-mobile-operating-systems.svg" width="60%">
 
 ### Shells
 ![github-shells](https://nschloe.github.io/hotware/github-shells.svg) | ![stackoverflow-shells](https://nschloe.github.io/hotware/stackoverflow-shells.svg)
 :-------------------:|:------------------:|
 
 ### Code-hosting platforms
-<img src="https://nschloe.github.io/hotware/stackoverflow-code-hosting-platforms.svg" width="100%">
+<img src="https://nschloe.github.io/hotware/stackoverflow-code-hosting-platforms.svg" width="60%">
 
 ### Content-management systems
 ![github-content-management-systems](https://nschloe.github.io/hotware/github-content-management-systems.svg) | ![stackoverflow-content-management-systems](https://nschloe.github.io/hotware/stackoverflow-content-management-systems.svg)
