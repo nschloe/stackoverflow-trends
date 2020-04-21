@@ -14,11 +14,19 @@ hotware provides Python and command-line tools for collecting popularity data fr
 [GitHub stars](http://github.com/) and [StackOverflow tags](https://stackoverflow.com/)
 and producing nice plots from it.
 
-For example:
+For example, the plots
 
 ![github-shells](https://nschloe.github.io/hotware/nschloe.svg) | ![stackoverflow-shells](https://nschloe.github.io/hotware/so-example.svg)
 :-------------------:|:------------------:|
-`hotware-gh-star-history nschloe/meshio nschloe/betterbib nschloe/tikzplotlib nschloe/perfplot nschloe/quadpy nschloe/pygmsh -m 30 -t githubtoken123243324 -o nschloe.svg` | `hotware-so-tag-history numpy scipy pandas matplotlib tensorflow`
+
+are produced with
+```
+hotware-gh-star-history nschloe/meshio nschloe/betterbib nschloe/tikzplotlib nschloe/perfplot nschloe/quadpy nschloe/pygmsh -m 30 -t githubtoken123243324 -o nschloe.svg
+```
+```
+hotware-so-tag-history numpy scipy pandas matplotlib tensorflow
+```
+
 
 ## Gallery
 
