@@ -10,12 +10,15 @@
 [![GitHub stars](https://img.shields.io/github/stars/nschloe/hotware.svg?style=flat-square&logo=github&label=Stars&logoColor=white)](https://github.com/nschloe/hotware)
 [![PyPi downloads](https://img.shields.io/pypi/dm/hotware.svg?style=flat-square)](https://pypistats.org/packages/hotware)
 
-hotware collects popularity data from [GitHub stars](http://github.com/) and
-[StackOverflow tags](https://stackoverflow.com/) and produces nice plots from it.
+hotware provides Python and command-line tools for collecting popularity data from
+[GitHub stars](http://github.com/) and [StackOverflow tags](https://stackoverflow.com/)
+and producing nice plots from it.
 
-![github-shells](https://nschloe.github.io/hotware/nschloe.svg) | ![stackoverflow-shells](https://nschloe.github.io/hotware/stackoverflow-shells.svg)
+For example:
+
+![github-shells](https://nschloe.github.io/hotware/nschloe.svg) | ![stackoverflow-shells](https://nschloe.github.io/hotware/so-example.svg)
 :-------------------:|:------------------:|
-`hotware-gh-star-history nschloe/meshio nschloe/betterbib nschloe/tikzplotlib nschloe/perfplot nschloe/quadpy nschloe/pygmsh -m 30 -t githubtoken123243324 -o nschloe.svg` | stack overflow
+`hotware-gh-star-history nschloe/meshio nschloe/betterbib nschloe/tikzplotlib nschloe/perfplot nschloe/quadpy nschloe/pygmsh -m 30 -t githubtoken123243324 -o nschloe.svg` | `hotware-so-tag-history numpy scipy pandas matplotlib tensorflow`
 
 ## Gallery
 
