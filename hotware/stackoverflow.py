@@ -117,9 +117,6 @@ def plot(filenames):
 
         times.append(list(data.keys()))
         stars.append(list(data.values()))
-        if "repository" in content:
-            labels.append(content["repository"])
-        else:
-            labels.append(content["tag"])
+        labels.append(content["name"])
 
     cpl.multiplot(times, stars, labels)

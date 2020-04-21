@@ -21,7 +21,7 @@ def update_file(
             content = json.load(f)
 
         if repo is not None:
-            assert content["repository"] == repo
+            assert content["name"] == repo
         if title is not None:
             assert content["title"] == title
         if creator is not None:
@@ -43,7 +43,7 @@ def update_file(
     d = {}
     if title is not None:
         d["title"] = title
-    d["repository"] = repo
+    d["name"] = repo
     if creator is not None:
         d["creator"] = creator
     if license is not None:

@@ -28,10 +28,7 @@ def plot(filenames):
 
         times.append(list(data.keys()))
         values.append(list(data.values()))
-        if "repository" in content:
-            labels.append(content["repository"])
-        else:
-            labels.append(content["tag"])
+        labels.append(content["name"])
 
     cpl.multiplot(times, values, labels)
 
@@ -85,10 +82,6 @@ def plot_per_day(filenames):
         v = list(data.values())
         times.append(_get_middle_times(t))
         values.append(_get_avg_per_day(t, v))
-
-        if "repository" in content:
-            labels.append(content["repository"])
-        else:
-            labels.append(content["tag"])
+        labels.append(content["name"])
 
     cpl.multiplot(times, values, labels)
