@@ -19,6 +19,9 @@ def tag_history(argv=None):
         filenames.append(p / ("stackoverflow-" + tag + ".json"))
         update_file(filenames[-1], tag=tag, title="StackOverflow tags")
 
+    if args.font is not None:
+        plt.rc("font", family=args.font)
+
     # plot it
     plot_per_day(filenames)
     plt.title("Daily number of questions on StackOverflow")
@@ -50,6 +53,13 @@ def parse_args(argv):
         "--cache-dir",
         type=str,
         help="Cache directory (optional, default: current directory)",
+    )
+
+    parser.add_argument(
+        "-f",
+        "--font",
+        type=str,
+        help="Which font to use (optional, default: default matplotlib font)",
     )
 
     version = "\n".join(

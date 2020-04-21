@@ -27,6 +27,9 @@ def star_history(argv=None):
             verbose=True,
         )
 
+    if args.font is not None:
+        plt.rc("font", family=args.font)
+
     # plot it
     plot(filenames)
     plt.title("Star count on GitHub")
@@ -67,6 +70,13 @@ def parse_args(argv):
         "--cache-dir",
         type=str,
         help="Cache directory (optional, default: current directory)",
+    )
+
+    parser.add_argument(
+        "-f",
+        "--font",
+        type=str,
+        help="Which font to use (optional, default: default matplotlib font)",
     )
 
     version = "\n".join(
