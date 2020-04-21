@@ -1,4 +1,7 @@
-# hotware
+<p align="center">
+  <a href="https://github.com/nschloe/hotware"><img alt="hotware-logo" src="https://nschloe.github.io/hotware/hotware-logo-path.svg" width="50%"></a>
+  <p align="center">How popular is this software?</p>
+</p>
 
 [![gh-actions](https://img.shields.io/github/workflow/status/nschloe/hotware/ci?style=flat-square)](https://github.com/nschloe/hotware/actions?query=workflow%3Aci)
 [![codecov](https://img.shields.io/codecov/c/github/nschloe/hotware.svg?style=flat-square)](https://codecov.io/gh/nschloe/hotware)
@@ -7,8 +10,6 @@
 [![PyPi Version](https://img.shields.io/pypi/v/hotware.svg?style=flat-square)](https://pypi.org/project/hotware)
 [![GitHub stars](https://img.shields.io/github/stars/nschloe/hotware.svg?style=flat-square&logo=github&label=Stars&logoColor=white)](https://github.com/nschloe/hotware)
 [![PyPi downloads](https://img.shields.io/pypi/dm/hotware.svg?style=flat-square)](https://pypistats.org/packages/hotware)
-
-Several mesh smoothing/optimization methods with one simple interface. hotware
 
 This repo provides some graphs on how many questions are asked on specific topics on
 [Stack Overflow](https://stackoverflow.com/), similar to [Stack Overflow
