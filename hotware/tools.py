@@ -17,7 +17,34 @@ def show(*args, **kwargs):
     plt.show()
 
 
-def plot(filenames):
+def plot(filenames, sort=True, cut=None):
+    if sort:
+        # sort them such that the largest at the last time step gets plotted first and
+        # the colors are in a nice order
+        last_vals = []
+        for filename in filenames:
+            with open(filename) as f:
+                content = json.load(f)
+            last_vals.append(list(content["data"].values())[-1])
+
+        filenames = [filenames[i] for i in _argsort(last_vals)[::-1]]
+
+    if cut is not None:
+        # cut those files where the max data is less than cut*max_overall
+        max_vals = []
+        for filename in filenames:
+            with open(filename) as f:
+                content = json.load(f)
+            vals = list(content["data"].values())
+            max_vals.append(max(vals))
+
+        max_overall = max(max_vals)
+        filenames = [
+            filename
+            for filename, max_val in zip(filenames, max_vals)
+            if max_val > cut * max_overall
+        ]
+
     times = []
     values = []
     labels = []
