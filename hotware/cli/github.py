@@ -24,7 +24,7 @@ def star_history(argv=None):
             repo=repo,
             token=args.token,
             title="GitHub stars",
-            verbose=True
+            verbose=True,
         )
 
     # plot it
