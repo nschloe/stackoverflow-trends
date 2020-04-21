@@ -13,6 +13,10 @@
 hotware collects popularity data from [GitHub stars](http://github.com/) and
 [StackOverflow tags](https://stackoverflow.com/) and produces nice plots from it.
 
+![github-shells](https://nschloe.github.io/hotware/nschloe.svg) | ![stackoverflow-shells](https://nschloe.github.io/hotware/stackoverflow-shells.svg)
+:-------------------:|:------------------:|
+`hotware-gh-star-history nschloe/meshio nschloe/betterbib nschloe/tikzplotlib nschloe/perfplot nschloe/quadpy nschloe/pygmsh -m 30 -t githubtoken123243324 -o nschloe.svg` | stack overflow
+
 ## Gallery
 
 A collection of the GitHub/StackOverflow popularity of a number of topics.
