@@ -56,7 +56,8 @@ A collection of the GitHub/StackOverflow popularity of a number of topics.
 :-------------------:|:------------------:|
 
 #### Browsers
-<img src="https://nschloe.github.io/hotware/stackoverflow-browsers.svg" width="60%">
+![github-browsers](https://nschloe.github.io/hotware/github-browsers.svg) | ![stackoverflow-browsers](https://nschloe.github.io/hotware/stackoverflow-browsers.svg)
+:-------------------:|:------------------:|
 
 #### Databases
 ![github-databases](https://nschloe.github.io/hotware/github-databases.svg) | ![stackoverflow-databases](https://nschloe.github.io/hotware/stackoverflow-databases.svg)
