@@ -30,6 +30,10 @@ def update_file(
         if license is not None:
             assert content["license"] == license
 
+        now = datetime.utcnow()
+        if now - datetime.fromisoformat(content["last updated"]) < max_interval_length:
+            return
+
         data = content["data"]
     else:
         data = {}
@@ -85,7 +89,7 @@ def update_github_star_data(
     # Get last page. It'd be lovely if we could always get all stargazers (plus times),
     # but GitHubs limits is 40k right now (Apr 2020).
     r = requests.get(
-        f"https://api.github.com/repos/{repo}/stargazers",
+        url,
         headers=headers,
         params={"per_page": 1},
     )
