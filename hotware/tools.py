@@ -149,7 +149,7 @@ def _add_license_statement(content):
     plt.text(
         xlim[0],
         -(ylim[1] - ylim[0]) * 0.1,
-        f"Data source: {data_source} | Author: {creator} | License: {license}",
+        f"{data_source} | {creator} | {license}",
         fontsize=10,
         verticalalignment="top",
         color="#888",
