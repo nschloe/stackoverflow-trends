@@ -59,6 +59,7 @@ def update_file(
         d["license"] = license
     now = datetime.utcnow()
     now = now.replace(microsecond=0)
+    d["data source"] = "GitHub API via hotware"
     d["last updated"] = now.isoformat()
 
     d["data"] = dict(zip([t.isoformat() for t in data.keys()], data.values()))
