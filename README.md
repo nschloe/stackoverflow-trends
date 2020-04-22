@@ -113,19 +113,19 @@ A collection of the GitHub/StackOverflow popularity of a number of topics.
 :-------------------:|:------------------:|
 
 #### Machine learning
-![github-machine-learning](https://nschloe.github.io/hotware/github-machine-learning) | ![stackoverflow-machine-learning](https://nschloe.github.io/hotware/stackoverflow-machine-learning.svg)
+![github-machine-learning](https://nschloe.github.io/hotware/github-machine-learning.svg) | ![stackoverflow-machine-learning](https://nschloe.github.io/hotware/stackoverflow-machine-learning.svg)
 :-------------------:|:------------------:|
 
 #### Scientific Python
-![github-scientific-python](https://nschloe.github.io/hotware/github-scientific-python) | ![stackoverflow-scientific-python](https://nschloe.github.io/hotware/stackoverflow-scientific-python.svg)
+![github-scientific-python](https://nschloe.github.io/hotware/github-scientific-python.svg) | ![stackoverflow-scientific-python](https://nschloe.github.io/hotware/stackoverflow-scientific-python.svg)
 :-------------------:|:------------------:|
 
 #### Python plotting
-![github-python-plotting](https://nschloe.github.io/hotware/github-python-plotting) | ![stackoverflow-python-plotting](https://nschloe.github.io/hotware/stackoverflow-python-plotting.svg)
+![github-python-plotting](https://nschloe.github.io/hotware/github-python-plotting.svg) | ![stackoverflow-python-plotting](https://nschloe.github.io/hotware/stackoverflow-python-plotting.svg)
 :-------------------:|:------------------:|
 
 #### Popular JavaScript packages
-![github-popular-javascript](https://nschloe.github.io/hotware/github-popular-javascript) | ![stackoverflow-popular-javascript](https://nschloe.github.io/hotware/stackoverflow-popular-javascript.svg)
+![github-popular-javascript](https://nschloe.github.io/hotware/github-popular-javascript.svg) | ![stackoverflow-popular-javascript](https://nschloe.github.io/hotware/stackoverflow-popular-javascript.svg)
 :-------------------:|:------------------:|
 
 
