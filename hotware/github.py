@@ -230,4 +230,7 @@ def update_github_star_data(
         times.append(now)
         stars.append(now_num_stars)
 
+    # remove timezone info (it's UTC anyway)
+    times = [t.replace(tzinfo=None) for t in times]
+
     return dict(zip(times, stars))
