@@ -56,7 +56,11 @@ def update_file(
         }
         if tag is not None:
             params["tagged"] = tag
-        response = requests.get(url, params)
+        try:
+            response = requests.get(url, params)
+        except requests.exceptions.ConnectionError as e:
+            print(e)
+            break
         if not response.ok:
             print(response, response.reason)
             break

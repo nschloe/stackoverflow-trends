@@ -134,6 +134,15 @@ def plot_per_day(filenames, sort=True, cut=None):
         values.append(_get_avg_per_day(t, v))
         labels.append(content["name"])
 
+    # start plotting from the 0 before the first value
+    for j, (tm, val) in enumerate(zip(times, values)):
+        for i, x in enumerate(val):
+            if x > 0:
+                k = max(i - 1, 0)
+                break
+        times[j] = tm[k:]
+        values[j] = val[k:]
+
     cpl.multiplot(times, values, labels)
 
     if "creator" in content:
