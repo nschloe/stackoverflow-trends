@@ -78,7 +78,9 @@ def _bisect_until_second_time(url, headers, time0, page0, page1):
     # first check the second page, after that: proper bisection
     page = page0 + 1
     r = requests.get(url, headers=headers, params={"page": page, "per_page": 1})
-    assert r.ok, f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
+    assert (
+        r.ok
+    ), f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
     time = datetime.strptime(r.json()[0]["starred_at"], date_fmt)
     if time == time0:
         page0 = page
@@ -89,7 +91,9 @@ def _bisect_until_second_time(url, headers, time0, page0, page1):
     while page0 + 1 < page1:
         page = (page0 + page1) // 2
         r = requests.get(url, headers=headers, params={"page": page, "per_page": 1})
-        assert r.ok, f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
+        assert (
+            r.ok
+        ), f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
         time = datetime.strptime(r.json()[0]["starred_at"], date_fmt)
 
         if time == time0:
@@ -125,7 +129,9 @@ def update_github_star_data(
     # but GitHubs limits is 40k right now (Apr 2020).
     # <https://stackoverflow.com/q/61360705/353337>
     r = requests.get(url, headers=headers, params={"per_page": 1})
-    assert r.ok, f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
+    assert (
+        r.ok
+    ), f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
     #
     last_page_url, info = r.headers["link"].split(",")[1].split(";")
     assert info.strip() == 'rel="last"'
@@ -140,11 +146,15 @@ def update_github_star_data(
 
     # get times of first and last paged star
     r = requests.get(url, headers=headers, params={"page": 1, "per_page": 1})
-    assert r.ok, f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
+    assert (
+        r.ok
+    ), f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
     time_first = datetime.strptime(r.json()[0]["starred_at"], date_fmt)
     #
     r = requests.get(url, headers=headers, params={"page": last_page, "per_page": 1})
-    assert r.ok, f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
+    assert (
+        r.ok
+    ), f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
     time_last = datetime.strptime(r.json()[0]["starred_at"], date_fmt)
 
     times = list(data.keys())
@@ -198,7 +208,9 @@ def update_github_star_data(
         mp = (stars[k] + stars[k + 1]) // 2
 
         r = requests.get(url, headers=headers, params={"page": mp, "per_page": 1})
-        assert r.ok, f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
+        assert (
+            r.ok
+        ), f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
         time = datetime.strptime(r.json()[0]["starred_at"], date_fmt)
 
         if verbose:
@@ -225,7 +237,9 @@ def update_github_star_data(
     now = datetime.now(timezone.utc)
     if now - times[-1] > max_interval_length:
         r = requests.get(f"https://api.github.com/repos/{repo}", headers=headers)
-        assert r.ok, f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
+        assert (
+            r.ok
+        ), f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
         now_num_stars = r.json()["stargazers_count"]
         now = now.replace(microsecond=0)
         times.append(now)
