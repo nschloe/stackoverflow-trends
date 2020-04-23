@@ -39,33 +39,13 @@ and use the command-line tools as displayed. The `-h` switch gives more details.
 
 A collection of the GitHub/StackOverflow popularity of a number of topics.
 
-- [Programming languages](#programming-languages)
-- [Version control systems](#version-control-systems)
-- [Front-End frameworks](#front-end-frameworks)
-- [Back-End frameworks](#back-end-frameworks)
-- [Browsers](#browsers)
-- [Databases](#databases)
-- [JavaScript package managers](#javascript-package-managers)
-- [JavaScript testing frameworks](#javascript-testing-frameworks)
-- [Text editors](#text-editors)
-- [Operating systems](#operating-systems)
-- [Mobile operating systems](#mobile-operating-systems)
-- [Shells](#shells)
-- [Code-hosting platforms](#code-hosting-platforms)
-- [Content-management systems](#content-management-systems)
-- [Continuous-integration services](#continuous-integration-services)
-- [Office suites](#office-suites)
-- [Computer algebra systems](#computer-algebra-systems)
-- [DevOps](#devops)
-- [Build systems](#build-systems)
-
-If you'd to see more graphs, open an issue on this repo.
-
 #### Programming languages
-<img src="https://nschloe.github.io/hotware/stackoverflow-programming-languages.svg" width="60%">
+![github-programming-languages](https://nschloe.github.io/hotware/github-programming-languages.svg) | ![stackoverflow-programming-languages](https://nschloe.github.io/hotware/stackoverflow-programming-languages.svg)
+:-------------------:|:------------------:|
 
 #### Version control systems
-<img src="https://nschloe.github.io/hotware/stackoverflow-vcs.svg" width="60%">
+![github-vcs](https://nschloe.github.io/hotware/github-version-control-systems.svg) | ![stackoverflow-vcs](https://nschloe.github.io/hotware/stackoverflow-vcs.svg)
+:-------------------:|:------------------:|
 
 #### Front-End frameworks
 ![github-frontend-frameworks](https://nschloe.github.io/hotware/github-frontend-frameworks.svg) | ![stackoverflow-frontend-frameworks](https://nschloe.github.io/hotware/stackoverflow-frontend-frameworks.svg)
@@ -76,7 +56,8 @@ If you'd to see more graphs, open an issue on this repo.
 :-------------------:|:------------------:|
 
 #### Browsers
-<img src="https://nschloe.github.io/hotware/stackoverflow-browsers.svg" width="60%">
+![github-browsers](https://nschloe.github.io/hotware/github-browsers.svg) | ![stackoverflow-browsers](https://nschloe.github.io/hotware/stackoverflow-browsers.svg)
+:-------------------:|:------------------:|
 
 #### Databases
 ![github-databases](https://nschloe.github.io/hotware/github-databases.svg) | ![stackoverflow-databases](https://nschloe.github.io/hotware/stackoverflow-databases.svg)
@@ -95,7 +76,8 @@ If you'd to see more graphs, open an issue on this repo.
 :-------------------:|:------------------:|
 
 #### Operating systems
-<img src="https://nschloe.github.io/hotware/stackoverflow-operating-systems.svg" width="60%">
+![github-operating-systems](https://nschloe.github.io/hotware/github-operating-systems.svg) | ![stackoverflow-operating-systems](https://nschloe.github.io/hotware/stackoverflow-operating-systems.svg)
+:-------------------:|:------------------:|
 
 #### Mobile operating systems
 <img src="https://nschloe.github.io/hotware/stackoverflow-mobile-operating-systems.svg" width="60%">
@@ -129,6 +111,22 @@ If you'd to see more graphs, open an issue on this repo.
 
 #### Build systems
 ![github-build-systems](https://nschloe.github.io/hotware/github-build-systems.svg) | ![stackoverflow-build-systems](https://nschloe.github.io/hotware/stackoverflow-build-systems.svg)
+:-------------------:|:------------------:|
+
+#### Machine learning
+![github-machine-learning](https://nschloe.github.io/hotware/github-machine-learning.svg) | ![stackoverflow-machine-learning](https://nschloe.github.io/hotware/stackoverflow-machine-learning.svg)
+:-------------------:|:------------------:|
+
+#### Scientific Python
+![github-scientific-python](https://nschloe.github.io/hotware/github-scientific-python.svg) | ![stackoverflow-scientific-python](https://nschloe.github.io/hotware/stackoverflow-scientific-python.svg)
+:-------------------:|:------------------:|
+
+#### Python plotting
+![github-python-plotting](https://nschloe.github.io/hotware/github-python-plotting.svg) | ![stackoverflow-python-plotting](https://nschloe.github.io/hotware/stackoverflow-python-plotting.svg)
+:-------------------:|:------------------:|
+
+#### Popular JavaScript packages
+![github-popular-javascript](https://nschloe.github.io/hotware/github-popular-javascript.svg) | ![stackoverflow-popular-javascript](https://nschloe.github.io/hotware/stackoverflow-popular-javascript.svg)
 :-------------------:|:------------------:|
 
 

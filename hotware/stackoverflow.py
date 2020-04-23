@@ -1,10 +1,7 @@
 import json
-import pathlib
 from datetime import datetime
 
 import requests
-
-import cleanplotlib as cpl
 
 
 def update_file(
@@ -15,16 +12,15 @@ def update_file(
             content = json.load(f)
     except FileNotFoundError:
         # start from stackoverflow launch, Sep 15, 2008
-        fromdate = datetime(2008, 9, 15)
-        content = {
-            "title": title,
-            "name": tag,
-            "data": {fromdate.isoformat(): 0},
-        }
+        content = {"title": title, "name": tag}
         if creator is not None:
             content["creator"] = creator
         if license is not None:
             content["license"] = license
+        content["data source"] = "StackOverflow API via hotware"
+        content["last updated"] = ""
+        fromdate = datetime(2008, 9, 15)
+        content["data"] = {fromdate.isoformat(): 0}
     else:
         if title is not None:
             assert content["title"] == title
@@ -60,7 +56,11 @@ def update_file(
         }
         if tag is not None:
             params["tagged"] = tag
-        response = requests.get(url, params)
+        try:
+            response = requests.get(url, params)
+        except requests.exceptions.ConnectionError as e:
+            print(e)
+            break
         if not response.ok:
             print(response, response.reason)
             break
@@ -82,26 +82,8 @@ def update_file(
         )
 
     if has_new_data:
+        now = datetime.utcnow()
+        now = now.replace(microsecond=0)
+        content["last updated"] = now.isoformat()
         with open(filename, "w") as f:
             json.dump(content, f, indent=2, ensure_ascii=False)
-
-
-def plot(filenames):
-    times = []
-    stars = []
-    labels = []
-    for filename in filenames:
-        filename = pathlib.Path(filename)
-        assert filename.is_file(), f"{filename} not found."
-
-        with open(filename) as f:
-            content = json.load(f)
-
-        data = content["data"]
-        data = {datetime.fromisoformat(key): value for key, value in data.items()}
-
-        times.append(list(data.keys()))
-        stars.append(list(data.values()))
-        labels.append(content["name"])
-
-    cpl.multiplot(times, stars, labels)

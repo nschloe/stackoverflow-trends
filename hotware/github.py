@@ -30,6 +30,10 @@ def update_file(
         if license is not None:
             assert content["license"] == license
 
+        now = datetime.utcnow()
+        if now - datetime.fromisoformat(content["last updated"]) < max_interval_length:
+            return
+
         data = content["data"]
     else:
         data = {}
@@ -53,6 +57,10 @@ def update_file(
         d["creator"] = creator
     if license is not None:
         d["license"] = license
+    d["data source"] = "GitHub API via hotware"
+    now = datetime.utcnow()
+    now = now.replace(microsecond=0)
+    d["last updated"] = now.isoformat()
 
     d["data"] = dict(zip([t.isoformat() for t in data.keys()], data.values()))
 
@@ -60,6 +68,41 @@ def update_file(
         json.dump(d, f, indent=2, ensure_ascii=False)
 
     return
+
+
+def _bisect_until_second_time(url, headers, time0, page0, page1):
+    # For some GitHub repos, _many_ stars are reported at the same time as the first.
+    # Find the first occurence of a different time stamp.
+    date_fmt = "%Y-%m-%dT%H:%M:%S%z"
+
+    # first check the second page, after that: proper bisection
+    page = page0 + 1
+    r = requests.get(url, headers=headers, params={"page": page, "per_page": 1})
+    assert (
+        r.ok
+    ), f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
+    time = datetime.strptime(r.json()[0]["starred_at"], date_fmt)
+    if time == time0:
+        page0 = page
+    else:
+        page1 = page
+
+    # bisection
+    while page0 + 1 < page1:
+        page = (page0 + page1) // 2
+        r = requests.get(url, headers=headers, params={"page": page, "per_page": 1})
+        assert (
+            r.ok
+        ), f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
+        time = datetime.strptime(r.json()[0]["starred_at"], date_fmt)
+
+        if time == time0:
+            page0 = page
+        else:
+            page1 = page
+
+    # return the last page with the time same time as the first
+    return page0
 
 
 def update_github_star_data(
@@ -84,12 +127,11 @@ def update_github_star_data(
 
     # Get last page. It'd be lovely if we could always get all stargazers (plus times),
     # but GitHubs limits is 40k right now (Apr 2020).
-    r = requests.get(
-        f"https://api.github.com/repos/{repo}/stargazers",
-        headers=headers,
-        params={"per_page": 1},
-    )
-    assert r.ok, f"{r.url}, status code {r.status_code}, {r.reason}"
+    # <https://stackoverflow.com/q/61360705/353337>
+    r = requests.get(url, headers=headers, params={"per_page": 1})
+    assert (
+        r.ok
+    ), f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
     #
     last_page_url, info = r.headers["link"].split(",")[1].split(";")
     assert info.strip() == 'rel="last"'
@@ -104,11 +146,15 @@ def update_github_star_data(
 
     # get times of first and last paged star
     r = requests.get(url, headers=headers, params={"page": 1, "per_page": 1})
-    assert r.ok, f"{r.url}, status code {r.status_code}, {r.reason}"
+    assert (
+        r.ok
+    ), f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
     time_first = datetime.strptime(r.json()[0]["starred_at"], date_fmt)
-
+    #
     r = requests.get(url, headers=headers, params={"page": last_page, "per_page": 1})
-    assert r.ok, f"{r.url}, status code {r.status_code}, {r.reason}"
+    assert (
+        r.ok
+    ), f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
     time_last = datetime.strptime(r.json()[0]["starred_at"], date_fmt)
 
     times = list(data.keys())
@@ -128,6 +174,7 @@ def update_github_star_data(
             if time_last < time:
                 break
             k1 += 1
+        assert times[k1 - 1] == time_last
         extra_times = times[k1:]
         extra_stars = stars[k1:]
         times = times[:k1]
@@ -161,7 +208,9 @@ def update_github_star_data(
         mp = (stars[k] + stars[k + 1]) // 2
 
         r = requests.get(url, headers=headers, params={"page": mp, "per_page": 1})
-        assert r.ok, f"{r.url}, status code {r.status_code}, {r.reason}"
+        assert (
+            r.ok
+        ), f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
         time = datetime.strptime(r.json()[0]["starred_at"], date_fmt)
 
         if verbose:
@@ -173,28 +222,30 @@ def update_github_star_data(
 
         num_data_points += 1
 
+    # For some GitHub repos, _many_ stars are reported at the same time as the first.
+    # Find the first occurence of a different time stamp.
+    k1 = 0
+    while times[k1] == times[0]:
+        k1 += 1
+    stars[0] = _bisect_until_second_time(url, headers, times[0], 1, stars[k1])
+
     # re-append extra data
     times += extra_times
     stars += extra_stars
 
-    # check if we can remove some data (especially if we have two equal times)
-    new_times = [times[0]]
-    new_stars = [stars[0]]
-    for k in range(len(times) - 1):
-        if times[k + 1] - new_times[-1] > max_interval_length:
-            new_times.append(times[k])
-            new_stars.append(stars[k])
-    new_times.append(times[-1])
-    new_stars.append(stars[-1])
-
     # get number of stars right now
     now = datetime.now(timezone.utc)
-    if now - new_times[-1] > max_interval_length:
+    if now - times[-1] > max_interval_length:
         r = requests.get(f"https://api.github.com/repos/{repo}", headers=headers)
-        assert r.ok, f"{r.url}, status code {r.status_code}, {r.reason}"
+        assert (
+            r.ok
+        ), f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
         now_num_stars = r.json()["stargazers_count"]
         now = now.replace(microsecond=0)
-        new_times.append(now)
-        new_stars.append(now_num_stars)
+        times.append(now)
+        stars.append(now_num_stars)
 
-    return dict(zip(new_times, new_stars))
+    # remove timezone info (it's UTC anyway)
+    times = [t.replace(tzinfo=None) for t in times]
+
+    return dict(zip(times, stars))
