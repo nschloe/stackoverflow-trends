@@ -125,6 +125,10 @@ A collection of the GitHub/StackOverflow popularity of a number of topics.
 ![github-python-plotting](https://nschloe.github.io/hotware/github-python-plotting.svg) | ![stackoverflow-python-plotting](https://nschloe.github.io/hotware/stackoverflow-python-plotting.svg)
 :-------------------:|:------------------:|
 
+#### Python testing
+![github-python-testing](https://nschloe.github.io/hotware/github-python-testing.svg) | ![stackoverflow-python-testing](https://nschloe.github.io/hotware/stackoverflow-python-testing.svg)
+:-------------------:|:------------------:|
+
 #### Popular JavaScript packages
 ![github-popular-javascript](https://nschloe.github.io/hotware/github-popular-javascript.svg) | ![stackoverflow-popular-javascript](https://nschloe.github.io/hotware/stackoverflow-popular-javascript.svg)
 :-------------------:|:------------------:|
