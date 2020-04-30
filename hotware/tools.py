@@ -2,9 +2,10 @@ import json
 import pathlib
 from datetime import datetime
 
+import dufte
 import matplotlib.pyplot as plt
 
-import cleanplotlib as cpl
+plt.style.use(dufte.style)
 
 
 # https://stackoverflow.com/a/3382369/353337
@@ -62,7 +63,9 @@ def plot(filenames, sort=True, cut=None):
         values.append(list(data.values()))
         labels.append(content["name"])
 
-    cpl.multiplot(times, values, labels)
+        plt.plot(times, values, labels)
+
+    dufte.legend()
 
     if "creator" in content:
         _add_license_statement(content)
@@ -143,7 +146,10 @@ def plot_per_day(filenames, sort=True, cut=None):
         times[j] = tm[k:]
         values[j] = val[k:]
 
-    cpl.multiplot(times, values, labels)
+    for time, vals, label in zip(times, values, labels):
+        plt.plot(time, vals, label=label)
+
+    dufte.legend()
 
     if "creator" in content:
         _add_license_statement(content)
@@ -159,7 +165,6 @@ def _add_license_statement(content):
         xlim[0],
         -(ylim[1] - ylim[0]) * 0.1,
         f"{data_source} | {creator} | {license}",
-        fontsize=10,
+        fontsize="x-small",
         verticalalignment="top",
-        color="#888",
     )
