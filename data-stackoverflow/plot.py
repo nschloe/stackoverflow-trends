@@ -5,8 +5,6 @@ import matplotlib.pyplot as plt
 
 import hotware
 
-plt.rc("font", family="Helvetica World")
-
 this_dir = pathlib.Path(__file__).resolve().parent
 with open(this_dir / "groups.json") as f:
     data = json.load(f)
