@@ -146,8 +146,9 @@ def plot_per_day(filenames, sort=True, cut=None):
         times[j] = tm[k:]
         values[j] = val[k:]
 
-    for time, vals, label in zip(times, values, labels):
-        plt.plot(time, vals, label=label)
+    n = len(times)
+    for k, (time, vals, label) in enumerate(zip(times, values, labels)):
+        plt.plot(time, vals, label=label, zorder=n - k)
 
     dufte.legend()
 
