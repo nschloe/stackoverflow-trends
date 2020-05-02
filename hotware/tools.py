@@ -46,9 +46,6 @@ def plot(filenames, sort=True, cut=None):
             if max_val > cut * max_overall
         ]
 
-    times = []
-    values = []
-    labels = []
     for filename in filenames:
         filename = pathlib.Path(filename)
         assert filename.is_file(), f"{filename} not found."
@@ -59,11 +56,11 @@ def plot(filenames, sort=True, cut=None):
         data = content["data"]
         data = {datetime.fromisoformat(key): value for key, value in data.items()}
 
-        times.append(list(data.keys()))
-        values.append(list(data.values()))
-        labels.append(content["name"])
+        times = list(data.keys())
+        values = list(data.values())
+        label = content["name"]
 
-        plt.plot(times, values, labels)
+        plt.plot(times, values, label=label)
 
     dufte.legend()
 
