@@ -87,7 +87,8 @@ A collection of the GitHub/StackOverflow popularity of a number of topics.
 :-------------------:|:------------------:|
 
 #### Code-hosting platforms
-<img src="https://nschloe.github.io/hotware/stackoverflow-code-hosting-platforms.svg" width="60%">
+![github-code-hosting-platforms](https://nschloe.github.io/hotware/github-code-hosting-platforms.svg) | ![stackoverflow-code-hosting-platforms](https://nschloe.github.io/hotware/stackoverflow-code-hosting-platforms.svg)
+:-------------------:|:------------------:|
 
 #### Content-management systems
 ![github-content-management-systems](https://nschloe.github.io/hotware/github-content-management-systems.svg) | ![stackoverflow-content-management-systems](https://nschloe.github.io/hotware/stackoverflow-content-management-systems.svg)
