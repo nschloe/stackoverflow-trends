@@ -12,7 +12,7 @@ def update_groups():
     for group in data.values():
         print()
         for tag in group:
-            print(tag, "...")
+            # print(tag, "...")
             hotware.stackoverflow.update_file(
                 this_dir / "data" / (tag + ".json"),
                 tag=tag,
