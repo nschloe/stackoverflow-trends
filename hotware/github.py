@@ -219,6 +219,11 @@ def update_github_star_data(
         assert (
             r.ok
         ), f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
+
+        if len(r.json()) == 0:
+            # number of stargazers decreased?!
+            break
+
         time = datetime.strptime(r.json()[0]["starred_at"], date_fmt)
         time = time.replace(tzinfo=None)
 
