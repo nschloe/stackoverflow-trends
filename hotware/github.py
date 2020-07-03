@@ -163,6 +163,9 @@ def update_github_star_data(
     times = list(data.keys())
     stars = list(data.values())
 
+    # remove timezone info (it's UTC anyway)
+    times = [t.replace(tzinfo=None) for t in times]
+
     if len(data) == 0:
         times = [time_first, time_last]
         stars = [1, last_page]
@@ -217,6 +220,7 @@ def update_github_star_data(
             r.ok
         ), f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
         time = datetime.strptime(r.json()[0]["starred_at"], date_fmt)
+        time = time.replace(tzinfo=None)
 
         if verbose:
             print(f"{time}: {mp}")
