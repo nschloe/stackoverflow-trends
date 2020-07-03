@@ -150,12 +150,15 @@ def update_github_star_data(
         r.ok
     ), f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
     time_first = datetime.strptime(r.json()[0]["starred_at"], date_fmt)
+    # remove timezone information
+    time_first = time_first.replace(tzinfo=None)
     #
     r = requests.get(url, headers=headers, params={"page": last_page, "per_page": 1})
     assert (
         r.ok
     ), f"{r.url}, status code {r.status_code}, {r.reason}, {r.json()['message']}"
     time_last = datetime.strptime(r.json()[0]["starred_at"], date_fmt)
+    time_last = time_last.replace(tzinfo=None)
 
     times = list(data.keys())
     stars = list(data.values())
@@ -166,7 +169,7 @@ def update_github_star_data(
         extra_times = []
         extra_stars = []
     else:
-        assert time_first == times[0]
+        assert time_first == times[0], f"{time_first} != {times[0]}"
 
         # break off the extra data
         k1 = 0
@@ -174,7 +177,9 @@ def update_github_star_data(
             if time_last < time:
                 break
             k1 += 1
-        assert times[k1 - 1] == time_last
+
+        # not always true
+        # assert time_last == times[k1 - 1], f"{time_last} != {times[k1 - 1]}"
         extra_times = times[k1:]
         extra_stars = stars[k1:]
         times = times[:k1]
@@ -234,7 +239,7 @@ def update_github_star_data(
     stars += extra_stars
 
     # get number of stars right now
-    now = datetime.now(timezone.utc)
+    now = datetime.now(timezone.utc).replace(tzinfo=None)
     if now - times[-1] > max_interval_length:
         r = requests.get(f"https://api.github.com/repos/{repo}", headers=headers)
         assert (
