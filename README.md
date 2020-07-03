@@ -16,7 +16,7 @@ and producing nice plots from it.
 
 For example, the plots
 
-![github-shells](https://nschloe.github.io/hotware/nschloe.svg) | ![stackoverflow-shells](https://nschloe.github.io/hotware/so-example.svg)
+![github-nschloe](https://nschloe.github.io/hotware/nschloe.svg) | ![stackoverflow-shells](https://nschloe.github.io/hotware/so-example.svg)
 :-------------------:|:------------------:|
 
 are produced with
