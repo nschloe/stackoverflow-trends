@@ -4,6 +4,7 @@
 </p>
 
 [![gh-actions](https://img.shields.io/github/workflow/status/nschloe/stacktags/ci?style=flat-square)](https://github.com/nschloe/stacktags/actions?query=workflow%3Aci)
+[![codecov](https://img.shields.io/codecov/c/github/nschloe/stacktags.svg?style=flat-square)](https://codecov.io/gh/nschloe/stacktags)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg?style=flat-square)](https://github.com/psf/black)
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/stacktags.svg?style=flat-square)](https://pypi.org/pypi/stacktags/)
 [![PyPi Version](https://img.shields.io/pypi/v/stacktags.svg?style=flat-square)](https://pypi.org/project/stacktags)
