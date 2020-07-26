@@ -1,7 +1,7 @@
 import json
 import pathlib
 
-import hotware
+import stacktags
 
 
 def update_groups():
@@ -13,7 +13,7 @@ def update_groups():
         print()
         for tag in group:
             # print(tag, "...")
-            hotware.stackoverflow.update_file(
+            stacktags.stackoverflow.update_file(
                 this_dir / "data" / (tag + ".json"),
                 tag=tag,
                 license="CC BY",

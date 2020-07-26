@@ -9,7 +9,7 @@ tag:
 	# @echo "Tagging v$(VERSION)..."
 	# git tag v$(VERSION)
 	# git push --tags
-	curl -H "Authorization: token `cat $(HOME)/.github-access-token`" -d '{"tag_name": "v$(VERSION)"}' https://api.github.com/repos/nschloe/hotware/releases
+	curl -H "Authorization: token `cat $(HOME)/.github-access-token`" -d '{"tag_name": "v$(VERSION)"}' https://api.github.com/repos/nschloe/stacktags/releases
 
 upload:
 	@if [ "$(shell git rev-parse --abbrev-ref HEAD)" != "main" ]; then exit 1; fi
@@ -22,7 +22,7 @@ upload:
 publish: upload tag
 
 nschloe:
-	hotware-gh-star-history nschloe/tikzplotlib nschloe/meshio nschloe/perfplot nschloe/quadpy nschloe/pygmsh nschloe/betterbib nschloe/tuna nschloe/awesome-scientific-computing -m 14 -t `cat ~/.github-access-token` -o nschloe.svg
+	stacktags-gh-star-history nschloe/tikzplotlib nschloe/meshio nschloe/perfplot nschloe/quadpy nschloe/pygmsh nschloe/betterbib nschloe/tuna nschloe/awesome-scientific-computing -m 14 -t `cat ~/.github-access-token` -o nschloe.svg
 
 clean:
 	@find . | grep -E "(__pycache__|\.pyc|\.pyo$\)" | xargs rm -rf
