@@ -112,7 +112,7 @@ A collection of the StackOverflow popularity of a number of topics.
 
 
 #### Serialization formats
-![~stackoverflow-serialization-formats](https://nschloe.github.io/stacktags/~stackoverflow-serialization-formats.svg)
+![~stackoverflow-serialization-formats](https://nschloe.github.io/stacktags/stackoverflow-serialization-formats.svg)
 
 
 ### Related projects
