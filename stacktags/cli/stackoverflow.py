@@ -64,7 +64,7 @@ def parse_args(argv):
 
     version = "\n".join(
         [
-            "hotware {} [Python {}.{}.{}]".format(
+            "stacktags {} [Python {}.{}.{}]".format(
                 __version__,
                 sys.version_info.major,
                 sys.version_info.minor,

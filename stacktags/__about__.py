@@ -5,6 +5,6 @@ except ImportError:
     import importlib_metadata as metadata
 
 try:
-    __version__ = metadata.version("hotware")
+    __version__ = metadata.version("stacktags")
 except Exception:
     __version__ = "unknown"
