@@ -3,7 +3,7 @@ import pathlib
 
 import matplotlib.pyplot as plt
 
-import hotware
+import stacktags
 
 this_dir = pathlib.Path(__file__).resolve().parent
 with open(this_dir / "groups.json") as f:
@@ -18,10 +18,10 @@ def _argsort(seq):
 for group_name, group in data.items():
     filenames = [this_dir / "data" / (tag + ".json") for tag in group]
 
-    # hotware.plot(filenames)
+    # stacktags.plot(filenames)
     # plt.title("Number of tags on StackOverflow", fontsize=14)
 
-    hotware.plot_per_day(filenames, cut=0.05)
+    stacktags.plot_per_day(filenames, cut=0.05)
     plt.title("Daily number of questions on StackOverflow", fontsize=14)
 
     # plt.title("% of all questions that month", fontsize=14)
