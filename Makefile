@@ -27,3 +27,16 @@ format:
 lint:
 	black --check .
 	flake8 .
+
+update:
+	python3 data/update.py
+	git commit -a -m "data update"
+	git push
+	python3 data/plot.py
+	svgo *.svg
+	mkdir tmp/
+	mv *.svg tmp/
+	git commit -a -m "plots update"
+	git checkout gh-pages
+	mv tmp/* .
+	git push
