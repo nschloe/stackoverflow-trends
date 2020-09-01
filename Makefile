@@ -36,7 +36,7 @@ update:
 	svgo *.svg
 	mkdir tmp/
 	mv *.svg tmp/
-	git commit -a -m "plots update"
 	git checkout gh-pages
 	mv tmp/* .
+	git commit -a -m "plots update"
 	git push
