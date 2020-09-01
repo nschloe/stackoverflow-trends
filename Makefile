@@ -34,6 +34,7 @@ update:
 	git push
 	python3 data/plot.py
 	svgo *.svg
+	rm -rf tmp/
 	mkdir tmp/
 	mv *.svg tmp/
 	git checkout gh-pages
