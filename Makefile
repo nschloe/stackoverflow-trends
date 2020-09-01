@@ -29,15 +29,18 @@ lint:
 	flake8 .
 
 update:
-	# python3 data/update.py
-	# git commit -a -m "data update"
-	# git push
-	# python3 data/plot.py
-	# svgo *.svg
-	# rm -rf tmp/
-	# mkdir tmp/
-	# mv *.svg tmp/
+	@if [ "$(shell git rev-parse --abbrev-ref HEAD)" != "main" ]; then exit 1; fi
+	git checkout -b data-update
+	python3 data/update.py
+	git commit -a -m "data update"
+	git push
+	python3 data/plot.py
+	svgo *.svg
+	rm -rf tmp/
+	mkdir tmp/
+	mv *.svg tmp/
 	git checkout gh-pages
 	mv tmp/* .
 	git commit -a -m "plots update"
 	git push
+	git checkout data-update
