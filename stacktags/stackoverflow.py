@@ -5,7 +5,11 @@ import requests
 
 
 def update_file(
-    filename, tag=None, title="StackOverflow tags", creator=None, license=None,
+    filename,
+    tag=None,
+    title="StackOverflow tags",
+    creator=None,
+    license=None,
 ):
     try:
         with open(filename, "r") as f:
