@@ -28,12 +28,13 @@ lint:
 	black --check .
 	flake8 .
 
+DATE = $(shell date +%Y-%m-%d)
 update:
 	@if [ "$(shell git rev-parse --abbrev-ref HEAD)" != "main" ]; then exit 1; fi
-	git checkout -b data-update
+	git checkout -b data-update-$(DATE)`
 	python3 data/update.py
-	git commit -a -m "data update"
-	git push
+	git commit -a -m "data update $(DATE)"
+	git push --set-upstream origin data-update-$(DATE)
 	python3 data/plot.py
 	svgo *.svg
 	rm -rf tmp/
@@ -43,4 +44,4 @@ update:
 	mv tmp/* .
 	git commit -a -m "plots update"
 	git push
-	git checkout data-update
+	git checkout data-update-$(DATE)
