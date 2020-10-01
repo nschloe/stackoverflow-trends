@@ -31,7 +31,7 @@ lint:
 DATE = $(shell date +%Y-%m-%d)
 update:
 	@if [ "$(shell git rev-parse --abbrev-ref HEAD)" != "main" ]; then exit 1; fi
-	git checkout -b data-update-$(DATE)`
+	git checkout -b data-update-$(DATE)
 	python3 data/update.py
 	git commit -a -m "data update $(DATE)"
 	git push --set-upstream origin data-update-$(DATE)
