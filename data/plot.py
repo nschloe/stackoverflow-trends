@@ -21,7 +21,8 @@ for group_name, group in data.items():
     # stacktags.plot(filenames)
     # plt.title("Number of tags on StackOverflow", fontsize=14)
 
-    stacktags.plot_per_day(filenames, cut=0.05)
+    # chosen such that rust is just part of the crew :)
+    stacktags.plot_per_day(filenames, cut=0.018)
     plt.title("Daily number of questions on StackOverflow", fontsize=14)
 
     # plt.title("% of all questions that month", fontsize=14)

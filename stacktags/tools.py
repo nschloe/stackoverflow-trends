@@ -99,19 +99,20 @@ def plot_per_day(filenames, sort=True, cut=None):
         filenames = [filenames[i] for i in _argsort(last_vals)[::-1]]
 
     if cut is not None:
-        # cut those files where the max data is less than cut*max_overall
-        max_vals = []
+        # cut those files where the latest data is less than cut*max_latest
+        latest_vals = []
         for filename in filenames:
             with open(filename) as f:
                 content = json.load(f)
             vals = list(content["data"].values())
-            vals = [vals[k + 1] - vals[k] for k in range(len(vals) - 1)]
-            max_vals.append(max(vals))
+            # vals = [vals[k + 1] - vals[k] for k in range(len(vals) - 1)]
+            # max_vals.append(max(vals))
+            latest_vals.append(vals[-1] - vals[-2])
 
-        max_overall = max(max_vals)
+        max_overall = max(latest_vals)
         filenames = [
             filename
-            for filename, max_val in zip(filenames, max_vals)
+            for filename, max_val in zip(filenames, latest_vals)
             if max_val > cut * max_overall
         ]
 
