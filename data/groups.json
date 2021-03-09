@@ -288,5 +288,11 @@
     "protocol-buffers",
     "yaml",
     "xml"
+  ],
+  "messaging-platforms": [
+    "discord",
+    "irc",
+    "microsoft-teams",
+    "slack"
   ]
 }
