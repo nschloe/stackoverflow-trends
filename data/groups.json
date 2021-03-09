@@ -1,3 +1,292 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0ad18d1c2131fde81df7259ec03be8bdfb97e5014d524368fead49e41a0776ab
-size 4256
+{
+  "programming-languages": [
+    "assembly",
+    "c",
+    "c++",
+    "c#",
+    "clojure",
+    "dart",
+    "elixir",
+    "f#",
+    "fortran",
+    "go",
+    "groovy",
+    "haskell",
+    "java",
+    "javascript",
+    "julia",
+    "kotlin",
+    "matlab",
+    "objective-c",
+    "perl",
+    "php",
+    "python",
+    "r",
+    "ruby",
+    "rust",
+    "scala",
+    "sql",
+    "swift",
+    "typescript"
+  ],
+  "vcs": [
+    "bzr",
+    "cvs",
+    "git",
+    "mercurial",
+    "svn"
+  ],
+  "frontend-frameworks": [
+    "angular",
+    "angularjs",
+    "ember",
+    "backbone.js",
+    "meteor",
+    "preact",
+    "reactjs",
+    "svelte",
+    "vue.js"
+  ],
+  "backend-frameworks": [
+    "cakephp",
+    "django",
+    "express",
+    "feathersjs",
+    "flask",
+    "gatsby",
+    "koa",
+    "laravel",
+    "next.js",
+    "node.js",
+    "nuxt.js",
+    "ruby-on-rails",
+    "sails.js",
+    "spring"
+  ],
+  "text-editors": [
+    "atom-editor",
+    "emacs",
+    "nano",
+    "notepad++",
+    "sublimetext",
+    "vim",
+    "visual-studio-code"
+  ],
+  "operating-systems": [
+    "dos",
+    "freebsd",
+    "linux",
+    "macos",
+    "solaris",
+    "windows"
+  ],
+  "mobile-operating-systems": [
+    "android",
+    "blackberry",
+    "ios",
+    "symbian",
+    "tizen",
+    "windows-phone"
+  ],
+  "shells": [
+    "ash",
+    "bash",
+    "csh",
+    "elvish",
+    "fish",
+    "ksh",
+    "powershell",
+    "tcsh",
+    "zsh"
+  ],
+  "databases": [
+    "db2",
+    "elasticsearch",
+    "h2",
+    "mariadb",
+    "mongodb",
+    "ms-access",
+    "mysql",
+    "oracle",
+    "postgresql",
+    "redis",
+    "solr",
+    "sqlite",
+    "sql-server"
+  ],
+  "linux-distributions": [
+    "archlinux",
+    "debian",
+    "fedora",
+    "gentoo",
+    "mint",
+    "redhat",
+    "suse",
+    "ubuntu"
+  ],
+  "javascript-package-managers": [
+    "bower",
+    "browserify",
+    "grunt",
+    "gulp",
+    "npm",
+    "parceljs",
+    "rollupjs",
+    "webpack",
+    "yarn"
+  ],
+  "javascript-testing-frameworks": [
+    "ava",
+    "chai",
+    "cypress",
+    "enzyme",
+    "jestjs",
+    "jasmine",
+    "karma-runner",
+    "mocha",
+    "puppeteer",
+    "qunit",
+    "sinon",
+    "storybook"
+  ],
+  "code-hosting-platforms": [
+    "bitbucket",
+    "github",
+    "gitlab",
+    "google-code",
+    "launchpad",
+    "sourceforge"
+  ],
+  "content-management-systems": [
+    "blogger",
+    "dotnetnuke",
+    "drupal",
+    "expressionengine",
+    "joomla",
+    "magento",
+    "mediawiki",
+    "prestashop",
+    "shopify",
+    "squarespace",
+    "typo3",
+    "wordpress"
+  ],
+  "continuous-integration-services": [
+    "bamboo",
+    "circleci",
+    "github-actions",
+    "gitlab-ci",
+    "hudson",
+    "jenkins",
+    "teamcity",
+    "travis-ci"
+  ],
+  "browsers": [
+    "chromium",
+    "firefox",
+    "google-chrome",
+    "internet-explorer",
+    "microsoft-edge",
+    "opera",
+    "safari"
+  ],
+  "office-suites": [
+    "google-docs",
+    "libreoffice",
+    "ms-office",
+    "office365",
+    "openoffice.org"
+  ],
+  "computer-algebra-systems": [
+    "maple",
+    "maxima",
+    "sage",
+    "sympy",
+    "wolfram-mathematica"
+  ],
+  "devops": [
+    "amazon-cloudformation",
+    "ansible",
+    "chef",
+    "kubernetes",
+    "kubernetes-helm",
+    "packer",
+    "puppet",
+    "salt-stack",
+    "terraform",
+    "vagrant"
+  ],
+  "build-systems": [
+    "autotools",
+    "bazel",
+    "boost-build",
+    "buck",
+    "cmake",
+    "gyp",
+    "jam",
+    "makefile",
+    "meson-build",
+    "ninja",
+    "premake",
+    "qmake",
+    "scons",
+    "waf"
+  ],
+  "machine-learning": [
+    "caffe",
+    "keras",
+    "pytorch",
+    "scikit-learn",
+    "tensorflow",
+    "theano"
+  ],
+  "scientific-python": [
+    "astropy",
+    "dask",
+    "jupyter-notebook",
+    "numpy",
+    "pandas",
+    "scipy",
+    "sympy"
+  ],
+  "python-plotting": [
+    "bokeh",
+    "matplotlib",
+    "seaborn",
+    "plotly"
+  ],
+  "python-testing": [
+    "nosetests",
+    "pytest",
+    "python-unittest",
+    "tox"
+  ],
+  "popular-javascript": [
+    "axios",
+    "d3.js",
+    "electron",
+    "jquery",
+    "lodash",
+    "momentjs",
+    "reveal.js",
+    "three.js",
+    "twitter-bootstrap"
+  ],
+  "linux-desktop-environments": [
+    "gnome",
+    "xfce",
+    "mate-desktop",
+    "cinnamon",
+    "kde"
+  ],
+  "serialization-formats": [
+    "avro",
+    "bson",
+    "csv",
+    "json",
+    "pickle",
+    "protocol-buffers",
+    "yaml",
+    "xml"
+  ]
+}
