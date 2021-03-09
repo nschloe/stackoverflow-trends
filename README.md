@@ -111,10 +111,11 @@ A collection of the StackOverflow popularity of a number of topics.
 #### Linux desktop environments
 ![stackoverflow-~stackoverflow-linux-desktop-environments](https://nschloe.github.io/stacktags/stackoverflow-linux-desktop-environments.svg)
 
-
 #### Serialization formats
-![~stackoverflow-serialization-formats](https://nschloe.github.io/stacktags/stackoverflow-serialization-formats.svg)
+![stackoverflow-serialization-formats](https://nschloe.github.io/stacktags/stackoverflow-serialization-formats.svg)
 
+#### Messaging platforms
+![stackoverflow-messaging-platforms](https://nschloe.github.io/stacktags/stackoverflow-messaging-platforms.svg)
 
 ### Related projects
 

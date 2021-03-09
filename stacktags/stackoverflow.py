@@ -12,7 +12,7 @@ def update_file(
     license=None,
 ):
     try:
-        with open(filename, "r") as f:
+        with open(filename) as f:
             content = json.load(f)
     except FileNotFoundError:
         # start from stackoverflow launch, Sep 15, 2008
