@@ -3,13 +3,15 @@
   <p align="center">StackOverflow tag history.</p>
 </p>
 
-[![gh-actions](https://img.shields.io/github/workflow/status/nschloe/stacktags/ci?style=flat-square)](https://github.com/nschloe/stacktags/actions?query=workflow%3Aci)
-[![codecov](https://img.shields.io/codecov/c/github/nschloe/stacktags.svg?style=flat-square)](https://codecov.io/gh/nschloe/stacktags)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg?style=flat-square)](https://github.com/psf/black)
-[![PyPI pyversions](https://img.shields.io/pypi/pyversions/stacktags.svg?style=flat-square)](https://pypi.org/pypi/stacktags/)
 [![PyPi Version](https://img.shields.io/pypi/v/stacktags.svg?style=flat-square)](https://pypi.org/project/stacktags)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/stacktags.svg?style=flat-square)](https://pypi.org/pypi/stacktags/)
 [![GitHub stars](https://img.shields.io/github/stars/nschloe/stacktags.svg?style=flat-square&logo=github&label=Stars&logoColor=white)](https://github.com/nschloe/stacktags)
 [![PyPi downloads](https://img.shields.io/pypi/dm/stacktags.svg?style=flat-square)](https://pypistats.org/packages/stacktags)
+
+[![gh-actions](https://img.shields.io/github/workflow/status/nschloe/stacktags/ci?style=flat-square)](https://github.com/nschloe/stacktags/actions?query=workflow%3Aci)
+[![codecov](https://img.shields.io/codecov/c/github/nschloe/stacktags.svg?style=flat-square)](https://codecov.io/gh/nschloe/stacktags)
+[![LGTM](https://img.shields.io/lgtm/grade/python/github/nschloe/stacktags.svg?style=flat-square)](https://lgtm.com/projects/g/nschloe/stacktags)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg?style=flat-square)](https://github.com/psf/black)
 
 stacktags provides Python and command-line tools for collecting popularity data from
 [GitHub stars](http://github.com/) and [StackOverflow tags](https://stackoverflow.com/)
