@@ -149,6 +149,18 @@
     "sinon",
     "storybook"
   ],
+  "javascript-visualization": [
+    "c3.js",
+    "chart.js",
+    "chartist.js",
+    "d3.js",
+    "echarts",
+    "highcharts",
+    "plotly.js",
+    "raphael",
+    "recharts",
+    "three.js"
+  ],
   "code-hosting-platforms": [
     "bitbucket",
     "github",
@@ -269,7 +281,6 @@
     "lodash",
     "momentjs",
     "reveal.js",
-    "three.js",
     "twitter-bootstrap"
   ],
   "linux-desktop-environments": [
