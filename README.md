@@ -107,6 +107,9 @@ A collection of the StackOverflow popularity of a number of topics.
 #### Python testing
 ![stackoverflow-python-testing](https://nschloe.github.io/stacktags/stackoverflow-python-testing.svg)
 
+#### JavaScript visualization
+![stackoverflow-javascript-visualization](https://nschloe.github.io/stacktags/stackoverflow-javascript-visualization.svg)
+
 #### Popular JavaScript packages
 ![stackoverflow-popular-javascript](https://nschloe.github.io/stacktags/stackoverflow-popular-javascript.svg)
 
