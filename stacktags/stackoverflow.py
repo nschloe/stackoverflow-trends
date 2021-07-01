@@ -10,6 +10,7 @@ def update_file(
     title="StackOverflow tags",
     creator=None,
     license=None,
+    verbose=False,
 ):
     try:
         with open(filename) as f:
@@ -76,9 +77,12 @@ def update_file(
 
         has_new_data = True
 
-        p = "all" if tag is None else tag
-        from_iso = fromdate.isoformat()
-        print("{:<16}: {:<6}  ({} -- {})".format(p, data["total"], from_iso, to_iso))
+        if verbose:
+            p = "all" if tag is None else tag
+            from_iso = fromdate.isoformat()
+            print(
+                "{:<16}: {:<6}  ({} -- {})".format(p, data["total"], from_iso, to_iso)
+            )
 
         fromdate = todate
         todate = datetime(

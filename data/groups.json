@@ -151,15 +151,25 @@
   ],
   "javascript-visualization": [
     "c3.js",
+    "canvasjs",
     "chart.js",
     "chartist.js",
     "d3.js",
     "echarts",
+    "fabricjs",
     "highcharts",
+    "paperjs",
     "plotly.js",
     "raphael",
     "recharts",
     "three.js"
+  ],
+  "javascript-diagrams": [
+    "gojs",
+    "jointjs",
+    "mermaid",
+    "mxgraph",
+    "rappid"
   ],
   "code-hosting-platforms": [
     "bitbucket",
