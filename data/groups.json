@@ -269,7 +269,8 @@
     "numpy",
     "pandas",
     "scipy",
-    "sympy"
+    "sympy",
+    "xarray"
   ],
   "python-plotting": [
     "bokeh",
