@@ -291,8 +291,7 @@
     "jquery",
     "lodash",
     "momentjs",
-    "reveal.js",
-    "twitter-bootstrap"
+    "reveal.js"
   ],
   "linux-desktop-environments": [
     "gnome",
@@ -316,5 +315,13 @@
     "irc",
     "microsoft-teams",
     "slack"
+  ],
+  "css-frameworks": [
+    "bulma",
+    "materialize",
+    "semantic-ui",
+    "tailwind-css",
+    "twitter-bootstrap",
+    "twitter-bootstrap-3"
   ]
 }
