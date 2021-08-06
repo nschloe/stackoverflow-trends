@@ -322,6 +322,10 @@
     "semantic-ui",
     "tailwind-css",
     "twitter-bootstrap",
-    "twitter-bootstrap-3"
+    "twitter-bootstrap-2",
+    "twitter-bootstrap-3",
+    "bootstrap-4",
+    "bootstrap-5",
+    "react-bootstrap"
   ]
 }
