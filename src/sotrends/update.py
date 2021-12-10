@@ -22,7 +22,7 @@ def update_file(
             content["creator"] = creator
         if license is not None:
             content["license"] = license
-        content["data source"] = "StackOverflow API via stacktags"
+        content["data source"] = "StackOverflow API via sotrends"
         content["last updated"] = ""
         fromdate = datetime(2008, 9, 15)
         content["data"] = {fromdate.isoformat(): 0}
