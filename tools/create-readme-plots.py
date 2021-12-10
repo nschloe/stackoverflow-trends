@@ -6,16 +6,19 @@ import sotrends
 this_dir = Path(__file__).parents[0]
 
 with open(this_dir / "groups.json") as f:
-    data = json.load(f)
+    groups = json.load(f)
 
 # make unique and sort
-all_tags = [item for lst in data.values() for item in lst]
+all_tags = [item for lst in groups.values() for item in lst]
 all_tags = sorted(list(set(all_tags)))
 
 tag_data = sotrends.fetch_data(all_tags)
 
-for group_name, tags in data.items():
-    plt = sotrends.plot({tag: tag_data[tag] for tag in tags})
+for group_name, tags in groups.items():
+    # cut chosen such that rust is just part of the crew :)
+    plt = sotrends.plot_per_day({tag: tag_data[tag] for tag in tags}, cut=0.018)
+
+    plt.title("Daily number of questions on StackOverflow", fontsize=14)
 
     xlim = plt.gca().get_xlim()
     ylim = plt.gca().get_ylim()
