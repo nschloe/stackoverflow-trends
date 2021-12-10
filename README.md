@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://github.com/nschloe/sotrends"><img alt="sotrends-logo" src="https://nschloe.github.io/sotrends/sotrends-logo-path.svg" width="50%"></a>
-  <p align="center">StackOverflow tag history.</p>
+  <a href="https://github.com/nschloe/sotrends"><img alt="sotrends-logo" src="https://nschloe.github.io/sotrends/sotrends-logo.svg" width="50%"></a>
+  <p align="center">StackOverflow trends.</p>
 </p>
 
 [![PyPi Version](https://img.shields.io/pypi/v/sotrends.svg?style=flat-square)](https://pypi.org/project/sotrends)
@@ -13,150 +13,127 @@
 [![LGTM](https://img.shields.io/lgtm/grade/python/github/nschloe/sotrends.svg?style=flat-square)](https://lgtm.com/projects/g/nschloe/sotrends)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg?style=flat-square)](https://github.com/psf/black)
 
-sotrends provides Python and command-line tools for collecting popularity data from
-[GitHub stars](http://github.com/) and [StackOverflow tags](https://stackoverflow.com/)
-and producing nice plots from it.
-
-For example, the plot
-
-![stackoverflow-shells](https://nschloe.github.io/sotrends/so-example.svg)
-
-is produced with
-
-```
-sotrends-so-tag-history numpy scipy pandas matplotlib tensorflow
-```
-
-StackOverflow has a rate limit, so you might want to get a token and provide it to
-sotrends.
-
-Install with
-
-```
-pip install sotrends
-```
-
-and use the command-line tool as displayed. The `-h` switch gives more details.
+sotrends is a Python tool that collects popularity data count from
+[StackOverflow tags](https://stackoverflow.com/) and produces nice plots from
+it.
 
 ## Gallery
 
-A collection of the StackOverflow popularity of a number of topics.
-
 #### Programming languages
 
-![stackoverflow-programming-languages](https://nschloe.github.io/sotrends/stackoverflow-programming-languages.svg)
+![programming-languages](https://nschloe.github.io/sotrends/programming-languages.svg)
 
 #### Version control systems
 
-![stackoverflow-vcs](https://nschloe.github.io/sotrends/stackoverflow-vcs.svg)
+![vcs](https://nschloe.github.io/sotrends/vcs.svg)
 
 #### Front-End frameworks
 
-![stackoverflow-frontend-frameworks](https://nschloe.github.io/sotrends/stackoverflow-frontend-frameworks.svg)
+![frontend-frameworks](https://nschloe.github.io/sotrends/frontend-frameworks.svg)
 
 #### Back-End frameworks
 
-![stackoverflow-backend-frameworks](https://nschloe.github.io/sotrends/stackoverflow-backend-frameworks.svg)
+![backend-frameworks](https://nschloe.github.io/sotrends/backend-frameworks.svg)
 
 #### Browsers
 
-![stackoverflow-browsers](https://nschloe.github.io/sotrends/stackoverflow-browsers.svg)
+![browsers](https://nschloe.github.io/sotrends/browsers.svg)
 
 #### Databases
 
-![stackoverflow-databases](https://nschloe.github.io/sotrends/stackoverflow-databases.svg)
+![databases](https://nschloe.github.io/sotrends/databases.svg)
 
 #### JavaScript package managers
 
-![stackoverflow-javascript-package-managers](https://nschloe.github.io/sotrends/stackoverflow-javascript-package-managers.svg)
+![javascript-package-managers](https://nschloe.github.io/sotrends/javascript-package-managers.svg)
 
 #### JavaScript testing frameworks
 
-![stackoverflow-testing-frameworks](https://nschloe.github.io/sotrends/stackoverflow-javascript-testing-frameworks.svg)
+![testing-frameworks](https://nschloe.github.io/sotrends/javascript-testing-frameworks.svg)
 
 #### Text editors
 
-![stackoverflow-text-editors](https://nschloe.github.io/sotrends/stackoverflow-text-editors.svg)
+![text-editors](https://nschloe.github.io/sotrends/text-editors.svg)
 
 #### Operating systems
 
-![stackoverflow-operating-systems](https://nschloe.github.io/sotrends/stackoverflow-operating-systems.svg)
+![operating-systems](https://nschloe.github.io/sotrends/operating-systems.svg)
 
 #### Mobile operating systems
 
-<img src="https://nschloe.github.io/sotrends/stackoverflow-mobile-operating-systems.svg" width="60%">
+<img src="https://nschloe.github.io/sotrends/mobile-operating-systems.svg" width="60%">
 
 #### Shells
 
-![stackoverflow-shells](https://nschloe.github.io/sotrends/stackoverflow-shells.svg)
+![shells](https://nschloe.github.io/sotrends/shells.svg)
 
 #### Code-hosting platforms
 
-![stackoverflow-code-hosting-platforms](https://nschloe.github.io/sotrends/stackoverflow-code-hosting-platforms.svg)
+![code-hosting-platforms](https://nschloe.github.io/sotrends/code-hosting-platforms.svg)
 
 #### Content-management systems
 
-![stackoverflow-content-management-systems](https://nschloe.github.io/sotrends/stackoverflow-content-management-systems.svg)
+![content-management-systems](https://nschloe.github.io/sotrends/content-management-systems.svg)
 
 #### Continuous-integration services
 
-![stackoverflow-continuous-integration-services](https://nschloe.github.io/sotrends/stackoverflow-continuous-integration-services.svg)
+![continuous-integration-services](https://nschloe.github.io/sotrends/continuous-integration-services.svg)
 
 #### Office suites
 
-![stackoverflow-office-suites](https://nschloe.github.io/sotrends/stackoverflow-office-suites.svg)
+![office-suites](https://nschloe.github.io/sotrends/office-suites.svg)
 
 #### Computer algebra systems
 
-![stackoverflow-computer-algebra-systems](https://nschloe.github.io/sotrends/stackoverflow-computer-algebra-systems.svg)
+![computer-algebra-systems](https://nschloe.github.io/sotrends/computer-algebra-systems.svg)
 
 #### DevOps
 
-![stackoverflow-devops](https://nschloe.github.io/sotrends/stackoverflow-devops.svg)
+![devops](https://nschloe.github.io/sotrends/devops.svg)
 
 #### Build systems
 
-![stackoverflow-build-systems](https://nschloe.github.io/sotrends/stackoverflow-build-systems.svg)
+![build-systems](https://nschloe.github.io/sotrends/build-systems.svg)
 
 #### Machine learning
 
-![stackoverflow-machine-learning](https://nschloe.github.io/sotrends/stackoverflow-machine-learning.svg)
+![machine-learning](https://nschloe.github.io/sotrends/machine-learning.svg)
 
 #### Scientific Python
 
-![stackoverflow-scientific-python](https://nschloe.github.io/sotrends/stackoverflow-scientific-python.svg)
+![scientific-python](https://nschloe.github.io/sotrends/scientific-python.svg)
 
 #### Python plotting
 
-![stackoverflow-python-plotting](https://nschloe.github.io/sotrends/stackoverflow-python-plotting.svg)
+![python-plotting](https://nschloe.github.io/sotrends/python-plotting.svg)
 
 #### Python testing
 
-![stackoverflow-python-testing](https://nschloe.github.io/sotrends/stackoverflow-python-testing.svg)
+![python-testing](https://nschloe.github.io/sotrends/python-testing.svg)
 
 #### JavaScript visualization
 
-![stackoverflow-javascript-visualization](https://nschloe.github.io/sotrends/stackoverflow-javascript-visualization.svg)
+![javascript-visualization](https://nschloe.github.io/sotrends/javascript-visualization.svg)
 
 #### Popular JavaScript packages
 
-![stackoverflow-popular-javascript](https://nschloe.github.io/sotrends/stackoverflow-popular-javascript.svg)
+![popular-javascript](https://nschloe.github.io/sotrends/popular-javascript.svg)
 
 #### Linux desktop environments
 
-![stackoverflow-~stackoverflow-linux-desktop-environments](https://nschloe.github.io/sotrends/stackoverflow-linux-desktop-environments.svg)
+![~linux-desktop-environments](https://nschloe.github.io/sotrends/linux-desktop-environments.svg)
 
 #### Serialization formats
 
-![stackoverflow-serialization-formats](https://nschloe.github.io/sotrends/stackoverflow-serialization-formats.svg)
+![serialization-formats](https://nschloe.github.io/sotrends/serialization-formats.svg)
 
 #### Messaging platforms
 
-![stackoverflow-messaging-platforms](https://nschloe.github.io/sotrends/stackoverflow-messaging-platforms.svg)
+![messaging-platforms](https://nschloe.github.io/sotrends/messaging-platforms.svg)
 
 #### CSS frameworks
 
-![stackoverflow-css-frameworks](https://nschloe.github.io/sotrends/stackoverflow-css-frameworks.svg)
+![css-frameworks](https://nschloe.github.io/sotrends/css-frameworks.svg)
 
 ### Related projects
 
