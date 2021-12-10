@@ -1,9 +1,8 @@
 import json
 import pathlib
 
-from rich.progress import Progress
-
 import stacktags
+from rich.progress import Progress
 
 
 def update_groups():

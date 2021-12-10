@@ -2,7 +2,6 @@ import json
 import pathlib
 
 import matplotlib.pyplot as plt
-
 import stacktags
 
 this_dir = pathlib.Path(__file__).resolve().parent
