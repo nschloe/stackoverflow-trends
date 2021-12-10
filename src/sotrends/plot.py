@@ -5,7 +5,12 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 import matplotx
 
-plt.style.use(matplotx.styles.dufte)
+
+def _merge(a, b):
+    return {**a, **b}
+
+
+plt.style.use(_merge(matplotx.styles.tab20r, matplotx.styles.dufte))
 
 
 # https://stackoverflow.com/a/3382369/353337
@@ -39,12 +44,16 @@ def plot_per_day(
     if sort:
         # sort them such that the largest at the last time step gets plotted first and
         # the colors are in a nice order
-        last_vals = [list(vals.values())[-1] for _, vals in data]
+        last_vals = [
+            list(vals.values())[-1] - list(vals.values())[-2] for _, vals in data
+        ]
         data = [data[i] for i in _argsort(last_vals)[::-1]]
 
     if cut is not None:
         # cut those files where the latest data is less than cut*max_latest
-        last_vals = [list(vals.values())[-1] for _, vals in data]
+        last_vals = [
+            list(vals.values())[-1] - list(vals.values())[-2] for _, vals in data
+        ]
 
         max_overall = max(last_vals)
         data = [
