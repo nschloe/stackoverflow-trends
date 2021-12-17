@@ -26,6 +26,10 @@
 
 ![backend-frameworks](https://nschloe.github.io/sotrends/backend-frameworks.svg)
 
+#### Universal rendering frameworks
+
+![universal-rendering-frameworks](https://nschloe.github.io/sotrends/universal-rendering-frameworks.svg)
+
 #### Browsers
 
 ![browsers](https://nschloe.github.io/sotrends/browsers.svg)
@@ -37,6 +41,10 @@
 #### JavaScript package managers
 
 ![javascript-package-managers](https://nschloe.github.io/sotrends/javascript-package-managers.svg)
+
+#### JavaScript bundlers
+
+![javascript-bundlers](https://nschloe.github.io/sotrends/javascript-bundlers.svg)
 
 #### JavaScript testing frameworks
 
