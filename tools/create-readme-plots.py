@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-import sotrends
+from _main import fetch_data, plot_per_day
 
 this_dir = Path(__file__).parents[0]
 
@@ -12,11 +12,11 @@ with open(this_dir / "groups.json") as f:
 all_tags = [item for lst in groups.values() for item in lst]
 all_tags = sorted(list(set(all_tags)))
 
-tag_data = sotrends.fetch_data(all_tags)
+tag_data = fetch_data(all_tags)
 
 for group_name, tags in groups.items():
     # cut chosen such that rust is just part of the crew :)
-    plt = sotrends.plot_per_day({tag: tag_data[tag] for tag in tags}, cut=0.018)
+    plt = plot_per_day({tag: tag_data[tag] for tag in tags}, cut=0.018)
 
     plt.title("Daily number of questions on StackOverflow", fontsize=14)
 
@@ -25,7 +25,7 @@ for group_name, tags in groups.items():
     plt.text(
         xlim[0],
         -(ylim[1] - ylim[0]) * 0.1,
-        "sotrends | Nico Schlömer @nschloe | CC BY",
+        "@nschloe / sotrends | Nico Schlömer | CC BY",
         fontsize="x-small",
         verticalalignment="top",
     )
