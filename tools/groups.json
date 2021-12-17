@@ -5,6 +5,7 @@
     "c++",
     "c#",
     "clojure",
+    "crystal-lang",
     "dart",
     "elixir",
     "f#",
@@ -28,15 +29,10 @@
     "scala",
     "sql",
     "swift",
-    "typescript"
+    "typescript",
+    "vlang"
   ],
-  "vcs": [
-    "bzr",
-    "cvs",
-    "git",
-    "mercurial",
-    "svn"
-  ],
+  "vcs": ["bzr", "cvs", "git", "mercurial", "svn"],
   "frontend-frameworks": [
     "angular",
     "angularjs",
@@ -46,24 +42,25 @@
     "preact",
     "reactjs",
     "svelte",
-    "vue.js"
+    "vue.js",
+    "vuejs2"
   ],
   "backend-frameworks": [
+    "asp.net-core",
     "cakephp",
     "django",
     "express",
     "feathersjs",
     "flask",
-    "gatsby",
     "koa",
     "laravel",
-    "next.js",
     "node.js",
-    "nuxt.js",
     "ruby-on-rails",
     "sails.js",
-    "spring"
+    "spring",
+    "symfony"
   ],
+  "universal-rendering-frameworks": ["gatsby", "next.js", "nuxt.js", "razzle"],
   "text-editors": [
     "atom-editor",
     "emacs",
@@ -126,16 +123,14 @@
     "suse",
     "ubuntu"
   ],
-  "javascript-package-managers": [
-    "bower",
+  "javascript-package-managers": ["bower", "npm", "pnpm", "yarn"],
+  "javascript-bundlers": [
     "browserify",
     "grunt",
     "gulp",
-    "npm",
     "parceljs",
     "rollupjs",
-    "webpack",
-    "yarn"
+    "webpack"
   ],
   "javascript-testing-frameworks": [
     "ava",
@@ -166,13 +161,7 @@
     "recharts",
     "three.js"
   ],
-  "javascript-diagrams": [
-    "gojs",
-    "jointjs",
-    "mermaid",
-    "mxgraph",
-    "rappid"
-  ],
+  "javascript-diagrams": ["gojs", "jointjs", "mermaid", "mxgraph", "rappid"],
   "code-hosting-platforms": [
     "bitbucket",
     "github",
@@ -274,18 +263,8 @@
     "sympy",
     "xarray"
   ],
-  "python-plotting": [
-    "bokeh",
-    "matplotlib",
-    "seaborn",
-    "plotly"
-  ],
-  "python-testing": [
-    "nosetests",
-    "pytest",
-    "python-unittest",
-    "tox"
-  ],
+  "python-plotting": ["bokeh", "matplotlib", "seaborn", "plotly"],
+  "python-testing": ["nosetests", "pytest", "python-unittest", "tox"],
   "popular-javascript": [
     "axios",
     "d3.js",
@@ -312,12 +291,7 @@
     "yaml",
     "xml"
   ],
-  "messaging-platforms": [
-    "discord",
-    "irc",
-    "microsoft-teams",
-    "slack"
-  ],
+  "messaging-platforms": ["discord", "irc", "microsoft-teams", "slack"],
   "css-frameworks": [
     "bulma",
     "materialize",

@@ -3,19 +3,10 @@
   <p align="center">StackOverflow trends.</p>
 </p>
 
-[![PyPi Version](https://img.shields.io/pypi/v/sotrends.svg?style=flat-square)](https://pypi.org/project/sotrends)
-[![PyPI pyversions](https://img.shields.io/pypi/pyversions/sotrends.svg?style=flat-square)](https://pypi.org/pypi/sotrends/)
 [![GitHub stars](https://img.shields.io/github/stars/nschloe/sotrends.svg?style=flat-square&logo=github&label=Stars&logoColor=white)](https://github.com/nschloe/sotrends)
-[![PyPi downloads](https://img.shields.io/pypi/dm/sotrends.svg?style=flat-square)](https://pypistats.org/packages/sotrends)
-
 [![gh-actions](https://img.shields.io/github/workflow/status/nschloe/sotrends/ci?style=flat-square)](https://github.com/nschloe/sotrends/actions?query=workflow%3Aci)
-[![codecov](https://img.shields.io/codecov/c/github/nschloe/sotrends.svg?style=flat-square)](https://codecov.io/gh/nschloe/sotrends)
 [![LGTM](https://img.shields.io/lgtm/grade/python/github/nschloe/sotrends.svg?style=flat-square)](https://lgtm.com/projects/g/nschloe/sotrends)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg?style=flat-square)](https://github.com/psf/black)
-
-sotrends is a Python tool that collects popularity data count from
-[StackOverflow tags](https://stackoverflow.com/) and produces nice plots from
-it.
 
 ## Gallery
 
@@ -35,6 +26,10 @@ it.
 
 ![backend-frameworks](https://nschloe.github.io/sotrends/backend-frameworks.svg)
 
+#### Universal rendering frameworks
+
+![universal-rendering-frameworks](https://nschloe.github.io/sotrends/universal-rendering-frameworks.svg)
+
 #### Browsers
 
 ![browsers](https://nschloe.github.io/sotrends/browsers.svg)
@@ -46,6 +41,10 @@ it.
 #### JavaScript package managers
 
 ![javascript-package-managers](https://nschloe.github.io/sotrends/javascript-package-managers.svg)
+
+#### JavaScript bundlers
+
+![javascript-bundlers](https://nschloe.github.io/sotrends/javascript-bundlers.svg)
 
 #### JavaScript testing frameworks
 
