@@ -32,7 +32,7 @@
     "typescript",
     "vlang"
   ],
-  "vcs": ["bzr", "cvs", "git", "mercurial", "svn"],
+  "vcs": ["bazaar", "cvs", "darcs", "git", "mercurial", "svn"],
   "frontend-frameworks": [
     "angular",
     "angularjs",
@@ -195,6 +195,7 @@
     "travis-ci"
   ],
   "browsers": [
+    "brave",
     "chromium",
     "firefox",
     "google-chrome",

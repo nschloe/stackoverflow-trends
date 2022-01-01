@@ -60,7 +60,7 @@
 
 #### Mobile operating systems
 
-<img src="https://nschloe.github.io/sotrends/mobile-operating-systems.svg" width="60%">
+![mobile-operating-systems](https://nschloe.github.io/sotrends/mobile-operating-systems.svg)
 
 #### Shells
 
