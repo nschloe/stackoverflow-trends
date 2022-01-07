@@ -1,138 +1,138 @@
 <p align="center">
-  <a href="https://github.com/nschloe/sotrends"><img alt="sotrends-logo" src="https://nschloe.github.io/sotrends/sotrends-logo.svg" width="50%"></a>
+  <a href="https://github.com/nschloe/so-trends"><img alt="so-trends-logo" src="https://nschloe.github.io/so-trends/sotrends-logo.svg" width="50%"></a>
   <p align="center">StackOverflow trends.</p>
 </p>
 
-[![GitHub stars](https://img.shields.io/github/stars/nschloe/sotrends.svg?style=flat-square&logo=github&label=Stars&logoColor=white)](https://github.com/nschloe/sotrends)
-[![gh-actions](https://img.shields.io/github/workflow/status/nschloe/sotrends/ci?style=flat-square)](https://github.com/nschloe/sotrends/actions?query=workflow%3Aci)
-[![LGTM](https://img.shields.io/lgtm/grade/python/github/nschloe/sotrends.svg?style=flat-square)](https://lgtm.com/projects/g/nschloe/sotrends)
+[![GitHub stars](https://img.shields.io/github/stars/nschloe/so-trends.svg?style=flat-square&logo=github&label=Stars&logoColor=white)](https://github.com/nschloe/so-trends)
+[![gh-actions](https://img.shields.io/github/workflow/status/nschloe/so-trends/ci?style=flat-square)](https://github.com/nschloe/so-trends/actions?query=workflow%3Aci)
+[![LGTM](https://img.shields.io/lgtm/grade/python/github/nschloe/so-trends.svg?style=flat-square)](https://lgtm.com/projects/g/nschloe/so-trends)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg?style=flat-square)](https://github.com/psf/black)
 
 ## Gallery
 
 #### Programming languages
 
-![programming-languages](https://nschloe.github.io/sotrends/programming-languages.svg)
+![programming-languages](https://nschloe.github.io/so-trends/programming-languages.svg)
 
 #### Version control systems
 
-![vcs](https://nschloe.github.io/sotrends/vcs.svg)
+![vcs](https://nschloe.github.io/so-trends/vcs.svg)
 
 #### Front-End frameworks
 
-![frontend-frameworks](https://nschloe.github.io/sotrends/frontend-frameworks.svg)
+![frontend-frameworks](https://nschloe.github.io/so-trends/frontend-frameworks.svg)
 
 #### Back-End frameworks
 
-![backend-frameworks](https://nschloe.github.io/sotrends/backend-frameworks.svg)
+![backend-frameworks](https://nschloe.github.io/so-trends/backend-frameworks.svg)
 
 #### Universal rendering frameworks
 
-![universal-rendering-frameworks](https://nschloe.github.io/sotrends/universal-rendering-frameworks.svg)
+![universal-rendering-frameworks](https://nschloe.github.io/so-trends/universal-rendering-frameworks.svg)
 
 #### Browsers
 
-![browsers](https://nschloe.github.io/sotrends/browsers.svg)
+![browsers](https://nschloe.github.io/so-trends/browsers.svg)
 
 #### Databases
 
-![databases](https://nschloe.github.io/sotrends/databases.svg)
+![databases](https://nschloe.github.io/so-trends/databases.svg)
 
 #### JavaScript package managers
 
-![javascript-package-managers](https://nschloe.github.io/sotrends/javascript-package-managers.svg)
+![javascript-package-managers](https://nschloe.github.io/so-trends/javascript-package-managers.svg)
 
 #### JavaScript bundlers
 
-![javascript-bundlers](https://nschloe.github.io/sotrends/javascript-bundlers.svg)
+![javascript-bundlers](https://nschloe.github.io/so-trends/javascript-bundlers.svg)
 
 #### JavaScript testing frameworks
 
-![testing-frameworks](https://nschloe.github.io/sotrends/javascript-testing-frameworks.svg)
+![testing-frameworks](https://nschloe.github.io/so-trends/javascript-testing-frameworks.svg)
 
 #### Text editors
 
-![text-editors](https://nschloe.github.io/sotrends/text-editors.svg)
+![text-editors](https://nschloe.github.io/so-trends/text-editors.svg)
 
 #### Operating systems
 
-![operating-systems](https://nschloe.github.io/sotrends/operating-systems.svg)
+![operating-systems](https://nschloe.github.io/so-trends/operating-systems.svg)
 
 #### Mobile operating systems
 
-![mobile-operating-systems](https://nschloe.github.io/sotrends/mobile-operating-systems.svg)
+![mobile-operating-systems](https://nschloe.github.io/so-trends/mobile-operating-systems.svg)
 
 #### Shells
 
-![shells](https://nschloe.github.io/sotrends/shells.svg)
+![shells](https://nschloe.github.io/so-trends/shells.svg)
 
 #### Code-hosting platforms
 
-![code-hosting-platforms](https://nschloe.github.io/sotrends/code-hosting-platforms.svg)
+![code-hosting-platforms](https://nschloe.github.io/so-trends/code-hosting-platforms.svg)
 
 #### Content-management systems
 
-![content-management-systems](https://nschloe.github.io/sotrends/content-management-systems.svg)
+![content-management-systems](https://nschloe.github.io/so-trends/content-management-systems.svg)
 
 #### Continuous-integration services
 
-![continuous-integration-services](https://nschloe.github.io/sotrends/continuous-integration-services.svg)
+![continuous-integration-services](https://nschloe.github.io/so-trends/continuous-integration-services.svg)
 
 #### Office suites
 
-![office-suites](https://nschloe.github.io/sotrends/office-suites.svg)
+![office-suites](https://nschloe.github.io/so-trends/office-suites.svg)
 
 #### Computer algebra systems
 
-![computer-algebra-systems](https://nschloe.github.io/sotrends/computer-algebra-systems.svg)
+![computer-algebra-systems](https://nschloe.github.io/so-trends/computer-algebra-systems.svg)
 
 #### DevOps
 
-![devops](https://nschloe.github.io/sotrends/devops.svg)
+![devops](https://nschloe.github.io/so-trends/devops.svg)
 
 #### Build systems
 
-![build-systems](https://nschloe.github.io/sotrends/build-systems.svg)
+![build-systems](https://nschloe.github.io/so-trends/build-systems.svg)
 
 #### Machine learning
 
-![machine-learning](https://nschloe.github.io/sotrends/machine-learning.svg)
+![machine-learning](https://nschloe.github.io/so-trends/machine-learning.svg)
 
 #### Scientific Python
 
-![scientific-python](https://nschloe.github.io/sotrends/scientific-python.svg)
+![scientific-python](https://nschloe.github.io/so-trends/scientific-python.svg)
 
 #### Python plotting
 
-![python-plotting](https://nschloe.github.io/sotrends/python-plotting.svg)
+![python-plotting](https://nschloe.github.io/so-trends/python-plotting.svg)
 
 #### Python testing
 
-![python-testing](https://nschloe.github.io/sotrends/python-testing.svg)
+![python-testing](https://nschloe.github.io/so-trends/python-testing.svg)
 
 #### JavaScript visualization
 
-![javascript-visualization](https://nschloe.github.io/sotrends/javascript-visualization.svg)
+![javascript-visualization](https://nschloe.github.io/so-trends/javascript-visualization.svg)
 
 #### Popular JavaScript packages
 
-![popular-javascript](https://nschloe.github.io/sotrends/popular-javascript.svg)
+![popular-javascript](https://nschloe.github.io/so-trends/popular-javascript.svg)
 
 #### Linux desktop environments
 
-![~linux-desktop-environments](https://nschloe.github.io/sotrends/linux-desktop-environments.svg)
+![~linux-desktop-environments](https://nschloe.github.io/so-trends/linux-desktop-environments.svg)
 
 #### Serialization formats
 
-![serialization-formats](https://nschloe.github.io/sotrends/serialization-formats.svg)
+![serialization-formats](https://nschloe.github.io/so-trends/serialization-formats.svg)
 
 #### Messaging platforms
 
-![messaging-platforms](https://nschloe.github.io/sotrends/messaging-platforms.svg)
+![messaging-platforms](https://nschloe.github.io/so-trends/messaging-platforms.svg)
 
 #### CSS frameworks
 
-![css-frameworks](https://nschloe.github.io/sotrends/css-frameworks.svg)
+![css-frameworks](https://nschloe.github.io/so-trends/css-frameworks.svg)
 
 ### Related projects
 

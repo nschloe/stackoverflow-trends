@@ -4,7 +4,6 @@ import json
 from datetime import datetime
 from pathlib import Path
 
-import appdirs
 import matplotlib.pyplot as plt
 import matplotx
 import requests
@@ -12,8 +11,12 @@ from rich.progress import Progress
 
 
 class Cache:
-    def __init__(self, repo: str):
-        cache_dir = Path(appdirs.user_cache_dir()) / "sotrends"
+    def __init__(self, repo: str, cache_dir: Path | None):
+        if cache_dir is None:
+            import appdirs
+
+            cache_dir = Path(appdirs.user_cache_dir()) / "so-trends"
+
         cache_dir.mkdir(parents=True, exist_ok=True)
 
         nrepo = repo.replace("/", "_")
@@ -39,14 +42,14 @@ class Cache:
             )
 
 
-def fetch_data(tags: list[str] | set[str]):
+def fetch_data(tags: list[str] | set[str], cache_dir: Path | None):
     out = {}
     with Progress() as progress:
         task1 = progress.add_task("Total", total=len(tags))
         task2 = progress.add_task("Repo")
         for tag in tags:
             progress.update(task2, description=tag)
-            cache = Cache(tag)
+            cache = Cache(tag, cache_dir)
 
             data = cache.read()
 

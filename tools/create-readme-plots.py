@@ -3,7 +3,7 @@ from pathlib import Path
 
 from _main import fetch_data, plot_per_day
 
-this_dir = Path(__file__).parents[0]
+this_dir = Path(__file__).resolve().parent
 
 with open(this_dir / "groups.json") as f:
     groups = json.load(f)
@@ -12,7 +12,7 @@ with open(this_dir / "groups.json") as f:
 all_tags = [item for lst in groups.values() for item in lst]
 all_tags = sorted(list(set(all_tags)))
 
-tag_data = fetch_data(all_tags)
+tag_data = fetch_data(all_tags, cache_dir=this_dir / ".." / "cache")
 
 for group_name, tags in groups.items():
     # cut chosen such that rust is just part of the crew :)
