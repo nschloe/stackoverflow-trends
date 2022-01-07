@@ -25,7 +25,7 @@ for group_name, tags in groups.items():
     plt.text(
         xlim[0],
         -(ylim[1] - ylim[0]) * 0.1,
-        "@nschloe / sotrends | Nico Schlömer | CC BY",
+        "@nschloe / so-trends | Nico Schlömer | CC BY",
         fontsize="x-small",
         verticalalignment="top",
     )
