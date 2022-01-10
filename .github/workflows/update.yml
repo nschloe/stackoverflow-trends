@@ -1,14 +1,14 @@
 name: update
 
-# at 3:47am at the first day of each month
-on:
-  schedule:
-    - cron: "47 3 1 0 *"
+  # # at 3:47am at the first day of each month
+  # on:
+  #   schedule:
+  #     - cron: "47 3 1 0 *"
 
-# on:
-#   push:
-#     branches:
-#       - main
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   update:
@@ -23,13 +23,6 @@ jobs:
       - name: Create readme plots
         run: |
           python3 tools/create-readme-plots.py
-      - name: Optimize files
-        run: |
-          npm install -g svgo
-          svgo *.svg
-          # and move them out of the way
-          mkdir /tmp/plots/
-          mv *.svg /tmp/plots/
       - name: Commit data
         run: |
           git config --local user.name "github-actions[bot]"
@@ -41,11 +34,12 @@ jobs:
           # https://stackoverflow.com/a/8123841/353337
           git diff-index --quiet HEAD || git commit -am "Automated update"
           git push
-      - name: Commit plots
+      - name: Optimize files
         run: |
-          git fetch
-          git checkout gh-pages
-          mv /tmp/plots/*.svg .
-          git add *.svg
-          git diff-index --quiet HEAD || git commit -am "Automated update"
-          git push
+          npm install -g svgo
+          svgo plots/
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.2.1
+        with:
+          branch: gh-pages
+          folder: plots/

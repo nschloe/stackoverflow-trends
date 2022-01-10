@@ -14,6 +14,9 @@ all_tags = sorted(list(set(all_tags)))
 
 tag_data = fetch_data(all_tags, cache_dir=this_dir / ".." / "cache")
 
+plot_dir = this_dir / ".." / "plots"
+plot_dir.mkdir(exist_ok=True)
+
 for group_name, tags in groups.items():
     # cut chosen such that rust is just part of the crew :)
     plt = plot_per_day({tag: tag_data[tag] for tag in tags}, cut=0.018)
@@ -29,6 +32,6 @@ for group_name, tags in groups.items():
         fontsize="x-small",
         verticalalignment="top",
     )
-    plt.savefig(f"{group_name}.svg", bbox_inches="tight", transparent=True)
+    plt.savefig(plot_dir / f"{group_name}.svg", bbox_inches="tight", transparent=True)
     # plt.show()
     plt.close()
