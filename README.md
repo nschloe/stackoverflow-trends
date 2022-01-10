@@ -1,7 +1,4 @@
-<p align="center">
-  <a href="https://github.com/nschloe/so-trends"><img alt="so-trends-logo" src="https://nschloe.github.io/so-trends/sotrends-logo.svg" width="50%"></a>
-  <p align="center">StackOverflow trends.</p>
-</p>
+# StackOverflow trends
 
 [![GitHub stars](https://img.shields.io/github/stars/nschloe/so-trends.svg?style=flat-square&logo=github&label=Stars&logoColor=white)](https://github.com/nschloe/so-trends)
 [![gh-actions](https://img.shields.io/github/workflow/status/nschloe/so-trends/ci?style=flat-square)](https://github.com/nschloe/so-trends/actions?query=workflow%3Aci)
