@@ -12,7 +12,7 @@ with open(this_dir / "groups.json") as f:
 all_tags = [item for lst in groups.values() for item in lst]
 all_tags = sorted(list(set(all_tags)))
 
-tag_data = fetch_data(all_tags, cache_dir=this_dir / ".." / "cache")
+tag_data = fetch_data(all_tags, cache_dir=this_dir / ".." / ".cache")
 
 plot_dir = this_dir / ".." / "plots"
 plot_dir.mkdir(exist_ok=True)
