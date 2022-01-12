@@ -304,5 +304,15 @@
     "bootstrap-4",
     "bootstrap-5",
     "react-bootstrap"
+  ],
+  "markup-languages": [
+    "asciidoc",
+    "creole",
+    "latex",
+    "markdown",
+    "restructuredtext",
+    "sgml",
+    "tex",
+    "troff"
   ]
 }

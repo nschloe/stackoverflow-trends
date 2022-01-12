@@ -131,6 +131,10 @@
 
 ![css-frameworks](https://nschloe.github.io/so-trends/css-frameworks.svg)
 
+#### Markup languages
+
+![markup-languages](https://nschloe.github.io/so-trends/markup-languages.svg)
+
 ### Related projects
 
 - [Stack Overflow Trends](https://insights.stackoverflow.com/trends)
