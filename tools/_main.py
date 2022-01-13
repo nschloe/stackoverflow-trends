@@ -53,10 +53,11 @@ def fetch_data(tags: list[str] | set[str], cache_dir: Path | None):
 
             data = cache.read()
 
-            data = _update(data, tag, progress_task=(progress, task2))
-            cache.write(data)
+            new_data = _update(data, tag, progress_task=(progress, task2))
+            if new_data != data:
+                cache.write(new_data)
 
-            out[tag] = data
+            out[tag] = new_data
             progress.advance(task1)
     return out
 
