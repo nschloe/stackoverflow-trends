@@ -53,8 +53,10 @@ def fetch_data(tags: list[str] | set[str], cache_dir: Path | None):
 
             data = cache.read()
 
+            old_len = len(data)
             new_data = _update(data, tag, progress_task=(progress, task2))
-            if new_data != data:
+
+            if old_len != len(new_data):
                 cache.write(new_data)
 
             out[tag] = new_data
@@ -62,12 +64,12 @@ def fetch_data(tags: list[str] | set[str], cache_dir: Path | None):
     return out
 
 
-def _update(data, tag, progress_task):
+def _update(data: dict, tag, progress_task):
     if data:
         fromdate = list(data.keys())[-1]
     else:
         fromdate = datetime(2008, 9, 15)
-        data = {fromdate: 0}
+        data[fromdate] = 0
 
     epoch = datetime(1970, 1, 1)
     now = datetime.utcnow()
