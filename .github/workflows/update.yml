@@ -1,14 +1,19 @@
 name: update
 
-# at 3:47am at the first day of each month
+# Execture in the morning at the first day of each month.
+# Do multiple runs, StackOverflow's rate limit doesn't allow all tags to be
+# processed in one go.
 on:
   schedule:
+    - cron: "2 47 1 * *"
     - cron: "3 47 1 * *"
+    - cron: "4 47 1 * *"
+    - cron: "11 20 1 * *"
 
-      # on:
-      #   push:
-      #     branches:
-      #       - main
+# on:
+#   push:
+#     branches:
+#       - main
 
 jobs:
   update:
