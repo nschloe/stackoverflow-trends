@@ -5,10 +5,10 @@ name: update
 # processed in one go.
 on:
   schedule:
-    - cron: "2 47 2 1 * *"
-    - cron: "3 47 3 1 * *"
-    - cron: "4 47 4 1 * *"
-    - cron: "45 12 1 * *"
+    - cron: "47 2 1 * *"
+    - cron: "47 3 1 * *"
+    - cron: "47 4 1 * *"
+    - cron: "54 12 1 * *"
 
 # on:
 #   push:
