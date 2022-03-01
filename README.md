@@ -27,6 +27,10 @@
 
 ![universal-rendering-frameworks](https://nschloe.github.io/so-trends/universal-rendering-frameworks.svg)
 
+#### Static-site generators
+
+![static-site-generators](https://nschloe.github.io/so-trends/static-site-generators.svg)
+
 #### Browsers
 
 ![browsers](https://nschloe.github.io/so-trends/browsers.svg)
