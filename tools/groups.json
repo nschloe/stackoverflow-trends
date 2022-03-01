@@ -61,6 +61,7 @@
     "symfony"
   ],
   "universal-rendering-frameworks": ["gatsby", "next.js", "nuxt.js", "razzle"],
+  "static-site-generators": ["hexo", "hugo", "jekyll", "next.js", "nuxt.js"],
   "text-editors": [
     "atom-editor",
     "emacs",
@@ -130,6 +131,7 @@
     "gulp",
     "parceljs",
     "rollupjs",
+    "vite",
     "webpack"
   ],
   "javascript-testing-frameworks": [
