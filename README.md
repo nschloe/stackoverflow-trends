@@ -2,6 +2,10 @@
 
 All graphs are updated monthly.
 
+#### Total number of questions
+
+![total](plots/total.svg)
+
 #### Programming languages
 
 ![programming-languages](plots/programming-languages.svg)
